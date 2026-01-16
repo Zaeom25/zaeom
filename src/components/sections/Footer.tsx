@@ -51,7 +51,7 @@ export const FinalCTA = () => {
                                 }}
                                 className="group inline-flex w-full sm:min-w-[280px] cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.02] border border-white/10 text-md font-extrabold text-white tracking-tight bg-white/5 backdrop-blur-2xl rounded-2xl py-6 px-10 relative items-center justify-center gap-4 overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]"
                             >
-                                <span className="relative z-10 uppercase font-black tracking-widest">QUERO COMEÇAR AGORA</span>
+                                <span className="relative z-10 uppercase font-black tracking-widest whitespace-nowrap">QUERO COMEÇAR AGORA</span>
                                 <Zap className="w-5 h-5 text-[#39F265] fill-current drop-shadow-[0_0_8px_rgba(57,242,101,0.5)]" />
 
                                 {/* Inner Gradient Reflection */}
