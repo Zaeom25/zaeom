@@ -90,7 +90,7 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Header - Always Fixed & Visible */}
-            <div className={`lg:hidden w-full transition-all duration-500 px-6 py-4 flex items-center justify-between relative z-[110] ${isScrolled || isMenuOpen ? 'bg-[#080808]/80 backdrop-blur-xl border-b border-white/5' : ''}`}>
+            <div className={`lg:hidden w-full transition-all duration-300 px-6 py-4 flex items-center justify-between relative z-[110] ${isScrolled || isMenuOpen ? 'bg-[#080808]/95 backdrop-blur-md border-b border-white/5' : ''}`}>
                 <img src={logoZaeom} alt="Zaeom Logo" className="h-7 w-auto" />
 
                 <button
@@ -125,14 +125,12 @@ export const Navbar = () => {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, x: "100%" }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: "100%" }}
-                        transition={{ type: "spring", damping: 30, stiffness: 200 }}
-                        className="fixed inset-0 z-[105] bg-[#080808] lg:hidden flex flex-col p-6 sm:p-8 pt-24 sm:pt-32"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="fixed inset-0 z-[105] bg-[#080808] lg:hidden flex flex-col p-6 pt-24"
                     >
-                        {/* Background Decoration */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#39F265]/5 blur-[120px] rounded-full pointer-events-none" />
 
                         <div className="relative z-10 space-y-8">
                             {navItems.map((item, i) => (
@@ -142,7 +140,7 @@ export const Navbar = () => {
                                     onClick={(e) => handleAnchorClick(e, item.href)}
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.1 + i * 0.1 }}
+                                    transition={{ duration: 0.2, delay: i * 0.05 }}
                                     className="flex items-center justify-between group"
                                 >
                                     <span className="text-3xl sm:text-4xl font-black text-[#FEFDFA] uppercase tracking-tighter group-hover:text-[#39F265] transition-colors">
@@ -168,14 +166,7 @@ export const Navbar = () => {
                 )}
             </AnimatePresence>
 
-            {/* Corner ID Signature (Scrolled View) */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isScrolled ? 1 : 0 }}
-                className="absolute top-10 left-12 hidden xl:block pointer-events-none"
-            >
-                <span className="text-2xl font-black text-[#FEFDFA]/20 tracking-tighter border-l-2 border-[#39F265] pl-4">Z-01</span>
-            </motion.div>
+
         </div>
     )
 }

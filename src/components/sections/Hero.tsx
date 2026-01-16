@@ -91,6 +91,10 @@ export const Hero = () => {
                 />
             </div>
 
+            <div className="absolute top-10 left-12 hidden xl:block pointer-events-none z-20">
+                <span className="text-2xl font-black text-[#FEFDFA]/25 tracking-tighter border-l-2 border-[#39F265] pl-4">Z-01</span>
+            </div>
+
             <div className="max-w-[1440px] mx-auto w-full relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

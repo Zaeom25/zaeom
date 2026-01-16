@@ -12,6 +12,9 @@ export const InteractiveBackground = () => {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
+        // Optimized for performance: kill on small mobile entirely
+        if (window.innerWidth < 768) return;
+
         let animationFrameId: number;
         let dots: { x: number; y: number; baseOpacity: number; phase: number; speed: number }[] = [];
         const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
