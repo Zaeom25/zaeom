@@ -82,7 +82,7 @@ export const Hero = () => {
     }
 
     return (
-        <section className="relative pt-32 pb-48 px-6 overflow-hidden min-h-screen flex flex-col items-center justify-center">
+        <section className="relative pt-24 pb-32 md:pt-32 md:pb-48 px-6 overflow-hidden min-h-[90vh] flex flex-col items-center justify-center">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <motion.div
@@ -102,13 +102,13 @@ export const Hero = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="text-center"
                 >
-                    <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-8 md:mb-12 overflow-hidden group">
+                    <div className="inline-flex items-center gap-1.5 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-6 md:mb-12 overflow-hidden group">
                         <div className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-[#39F265]">Neural System Active</span>
+                            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#39F265] whitespace-nowrap">Neural System Active</span>
                         </div>
                         <div className="w-px h-3 bg-[#39F265]/20" />
-                        <span className="text-[9px] md:text-[10px] font-bold text-[#FEFDFA]/40 uppercase tracking-[0.2em]">Protocolo Z-1 / 2026</span>
+                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">Protocolo Z-1 / 2026</span>
                     </div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold mb-8 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-tight md:tracking-[-0.04em] text-[#FEFDFA]">

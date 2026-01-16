@@ -42,7 +42,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-[#39F265]/30 selection:text-[#39F265];
+    @apply bg-background text-foreground font-body antialiased selection:bg-[#39F265]/30 selection:text-[#39F265] leading-relaxed;
     background-color: #030303;
   }
 }
@@ -97,7 +97,7 @@
 }
 
 .heading-xl {
-  @apply font-heading font-extrabold tracking-[-0.05em] leading-[0.9] text-[#FEFDFA];
+  @apply font-bold text-[#FEFDFA] tracking-tighter leading-[1.1] sm:leading-[0.9];
 }
 
 .bg-dot-pattern {

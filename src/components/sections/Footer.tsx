@@ -7,7 +7,7 @@ import logoLumo from "@/assets/logo-lumo.svg"
 
 export const FinalCTA = () => {
     return (
-        <section className="py-32 px-6 relative overflow-visible">
+        <section className="py-20 sm:py-32 px-6 relative overflow-visible">
             {/* Background Aura */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#39F265]/10 rounded-full blur-[120px] pointer-events-none opacity-50" />
 
@@ -27,7 +27,7 @@ export const FinalCTA = () => {
                         <span className="text-[10px] font-black text-[#39F265] uppercase tracking-[0.2em]">Sessão Final de Protocolo</span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-10 leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-8 sm:mb-10 leading-[1.1] sm:leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
                         Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">funil?</span>
                     </h2>
 
@@ -49,7 +49,7 @@ export const FinalCTA = () => {
                                         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                                     }
                                 }}
-                                className="group inline-flex min-w-[280px] cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.02] border border-white/10 text-md font-extrabold text-white tracking-tight bg-white/5 backdrop-blur-2xl rounded-2xl py-6 px-10 relative items-center justify-center gap-4 overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]"
+                                className="group inline-flex w-full sm:min-w-[280px] cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.02] border border-white/10 text-md font-extrabold text-white tracking-tight bg-white/5 backdrop-blur-2xl rounded-2xl py-6 px-10 relative items-center justify-center gap-4 overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]"
                             >
                                 <span className="relative z-10 uppercase font-black tracking-widest">QUERO COMEÇAR AGORA</span>
                                 <Zap className="w-5 h-5 text-[#39F265] fill-current drop-shadow-[0_0_8px_rgba(57,242,101,0.5)]" />
@@ -67,7 +67,7 @@ export const FinalCTA = () => {
                 {/* Decorative Tech Grid Overlay */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
             </motion.div>
-        </section>
+        </section >
     )
 }
 
@@ -150,10 +150,10 @@ export const Footer = () => {
 
                 {/* Dramatic Brand Signature Backdrop */}
                 <div className="mt-24 relative overflow-hidden pointer-events-none select-none flex flex-col items-center">
-                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block">
+                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.04] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block">
                         ZAEOM
                     </h2>
-                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block -mt-[2vw]">
+                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.04] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block -mt-[2vw]">
                         CORE
                     </h2>
 

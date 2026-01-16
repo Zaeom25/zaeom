@@ -55,7 +55,7 @@ export const Diagnosis = () => {
                                 <span className="text-[11px] font-black text-[#39F265] uppercase tracking-[0.4em]">Diagnóstico de Eficiência</span>
                             </div>
 
-                            <h2 className="heading-xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-12 text-left text-balance leading-[1.05] tracking-tight">
+                            <h2 className="heading-xl text-5xl md:text-6xl lg:text-7xl mb-12 text-left text-balance leading-[1.05] tracking-tight">
                                 {"Você sente que está".split(" ").map((word, i) => (
                                     <motion.span
                                         key={i}
@@ -140,7 +140,7 @@ export const Diagnosis = () => {
                                         hidden: { opacity: 0, y: 30, scale: 0.9 },
                                         show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
                                     }}
-                                    className="group p-6 sm:p-8 glass-card border-[#FEFDFA]/5 hover:border-[#39F265]/20 transition-all duration-500 overflow-hidden relative rounded-[2rem] sm:rounded-[2.5rem]"
+                                    className="group p-8 glass-card border-[#FEFDFA]/5 hover:border-[#39F265]/20 transition-all duration-500 overflow-hidden relative rounded-[2.5rem]"
                                 >
 
                                     <div className="flex justify-between items-start mb-10 relative z-10">

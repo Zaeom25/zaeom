@@ -48,9 +48,9 @@ const agents = [
 
 export const Solution = () => {
     return (
-        <section className="py-40 px-6 relative" id="solucoes">
+        <section className="py-24 md:py-40 px-6 relative" id="solucoes">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20 border-b border-[#FEFDFA]/5 pb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16 md:mb-20 border-b border-[#FEFDFA]/5 pb-12 md:pb-16">
                     <div className="max-w-4xl">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -64,7 +64,7 @@ export const Solution = () => {
                             </div>
                             <span className="text-[11px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.4em]">Infraestrutura de Agentes</span>
                         </motion.div>
-                        <h2 className="heading-xl text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight text-balance flex flex-col items-start translate-x-[-0.02em]">
+                        <h2 className="heading-xl text-3xl sm:text-5xl md:text-7xl lg:text-8xl flex flex-col items-start">
                             <motion.span
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
