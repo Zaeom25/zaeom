@@ -82,12 +82,12 @@ export const Hero = () => {
     }
 
     return (
-        <section className="relative pt-32 pb-48 px-6 overflow-visible min-h-screen flex flex-col items-center justify-center">
+        <section className="relative pt-32 pb-48 px-6 overflow-hidden min-h-screen flex flex-col items-center justify-center">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <motion.div
                     style={{ y: y1 }}
-                    className="absolute top-[10%] left-[-10%] w-[800px] h-[800px] bg-[#39F265]/5 rounded-full blur-[160px]"
+                    className="absolute top-[10%] left-[-10%] w-[800px] h-[800px] bg-[#39F265]/5 rounded-full blur-[80px] lg:blur-[160px]"
                 />
             </div>
 
@@ -107,7 +107,7 @@ export const Hero = () => {
                         <span className="text-[9px] md:text-[10px] font-bold text-[#FEFDFA]/40 uppercase tracking-[0.2em]">Protocolo Z-1 / 2026</span>
                     </div>
 
-                    <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold mb-8 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-[-0.04em] text-[#FEFDFA]">
+                    <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold mb-8 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-tight md:tracking-[-0.04em] text-[#FEFDFA]">
                         {"Transforme a sua".split(" ").map((word, i) => (
                             <motion.span
                                 key={i}

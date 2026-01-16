@@ -16,7 +16,7 @@ export const FinalCTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 viewport={{ once: true }}
-                className="max-w-6xl mx-auto rounded-[3rem] p-12 md:p-24 text-center bg-[#080808] border border-[#FEFDFA]/5 relative z-10 overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,1)]"
+                className="max-w-6xl mx-auto rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 md:p-24 text-center bg-[#080808] border border-[#FEFDFA]/5 relative z-10 overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,1)]"
             >
                 {/* HUD Top Accent */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-[#39F265] to-transparent opacity-50 shadow-[0_0_20px_#39F265]" />
@@ -27,7 +27,7 @@ export const FinalCTA = () => {
                         <span className="text-[10px] font-black text-[#39F265] uppercase tracking-[0.2em]">Sessão Final de Protocolo</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-10 leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-10 leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
                         Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">funil?</span>
                     </h2>
 
@@ -150,10 +150,10 @@ export const Footer = () => {
 
                 {/* Dramatic Brand Signature Backdrop */}
                 <div className="mt-24 relative overflow-hidden pointer-events-none select-none flex flex-col items-center">
-                    <h2 className="text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block">
+                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block">
                         ZAEOM
                     </h2>
-                    <h2 className="text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block -mt-[2vw]">
+                    <h2 className="text-[12vw] sm:text-[15vw] font-black text-[#FEFDFA]/[0.015] leading-[0.8] tracking-[-0.05em] uppercase italic inline-block -mt-[2vw]">
                         CORE
                     </h2>
 

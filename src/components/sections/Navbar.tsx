@@ -129,7 +129,7 @@ export const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 30, stiffness: 200 }}
-                        className="fixed inset-0 z-[100] bg-[#080808] lg:hidden flex flex-col p-8 pt-32"
+                        className="fixed inset-0 z-[105] bg-[#080808] lg:hidden flex flex-col p-6 sm:p-8 pt-24 sm:pt-32"
                     >
                         {/* Background Decoration */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#39F265]/5 blur-[120px] rounded-full pointer-events-none" />
@@ -145,10 +145,10 @@ export const Navbar = () => {
                                     transition={{ delay: 0.1 + i * 0.1 }}
                                     className="flex items-center justify-between group"
                                 >
-                                    <span className="text-4xl font-black text-[#FEFDFA] uppercase tracking-tighter group-hover:text-[#39F265] transition-colors">
+                                    <span className="text-3xl sm:text-4xl font-black text-[#FEFDFA] uppercase tracking-tighter group-hover:text-[#39F265] transition-colors">
                                         {item.name}
                                     </span>
-                                    <ChevronRight className="w-8 h-8 text-[#39F265] opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
+                                    <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 text-[#39F265] opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
                                 </motion.a>
                             ))}
                         </div>

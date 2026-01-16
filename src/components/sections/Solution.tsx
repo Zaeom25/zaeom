@@ -64,7 +64,7 @@ export const Solution = () => {
                             </div>
                             <span className="text-[11px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.4em]">Infraestrutura de Agentes</span>
                         </motion.div>
-                        <h2 className="heading-xl text-5xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight text-balance flex flex-col items-start translate-x-[-0.02em]">
+                        <h2 className="heading-xl text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight text-balance flex flex-col items-start translate-x-[-0.02em]">
                             <motion.span
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}

@@ -14,7 +14,8 @@ export const InteractiveBackground = () => {
 
         let animationFrameId: number;
         let dots: { x: number; y: number; baseOpacity: number; phase: number; speed: number }[] = [];
-        const spacing = 45;
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const spacing = isTouch ? 60 : 45; // More space between dots on mobile
 
         const initDots = () => {
             canvas.width = window.innerWidth;
@@ -34,6 +35,7 @@ export const InteractiveBackground = () => {
         };
 
         const handleMouseMove = (e: MouseEvent) => {
+            if (isTouch) return; // Skip mouse move on touch devices to save CPU
             mouseRef.current = { x: e.clientX, y: e.clientY };
             // Initialize lerp on first move to prevent long travel from origin
             if (lerpedMouseRef.current.x === -1000) {
@@ -58,12 +60,12 @@ export const InteractiveBackground = () => {
                 const maxDistSquared = maxDist * maxDist;
 
                 // 1. Smooth Breathing/Pulse Logic for all dots
-                // We use sine wave for a "biological" breathing feel
                 const breath = Math.sin(time * dot.speed + dot.phase) * 0.06;
                 let opacity = dot.baseOpacity + breath;
 
                 // 2. Interactive Spotlight with Smooth Exponential Falloff
-                if (distSquared < maxDistSquared) {
+                // Disable spotlight logic on mobile to save performance
+                if (!isTouch && distSquared < maxDistSquared) {
                     const dist = Math.sqrt(distSquared);
                     // Use higher power (3) for a more "focused core" but soft edges
                     const factor = Math.pow(1 - dist / maxDist, 3);

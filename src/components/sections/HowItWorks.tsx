@@ -46,7 +46,7 @@ export const HowItWorks = () => {
                         <Cpu className="w-4 h-4 text-[#39F265]" />
                         <span className="text-[10px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.3em]">Protocolo de Implementação</span>
                     </div>
-                    <h2 className="heading-xl text-5xl md:text-8xl">
+                    <h2 className="heading-xl text-3xl sm:text-5xl md:text-8xl">
                         Simples, Rápido e <br />
                         <span className="text-gradient">Sem Burocracia</span>
                     </h2>

@@ -21,9 +21,15 @@ function App() {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 1,
-      touchMultiplier: 2,
+      touchMultiplier: 1.5, // Reduced for more natural feel
       infinite: false,
     })
+
+    // Disable smooth scroll on mobile/touch devices for better performance
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      lenis.destroy();
+      return;
+    }
 
     function raf(time: number) {
       lenis.raf(time)
