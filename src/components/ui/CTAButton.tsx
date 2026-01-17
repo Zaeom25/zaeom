@@ -38,9 +38,9 @@ export const CTAButton = ({
 
     // Variant specific adjustments
     const variants = {
-        primary: "w-full md:min-w-[300px] text-xs md:text-sm font-bold tracking-[0.1em] py-6 md:py-7 px-8 md:px-10 gap-4 md:gap-5",
-        nav: "min-w-[200px] text-[10px] sm:text-[11px] font-black tracking-[0.2em] py-4 px-8 gap-3 sm:min-w-[200px]",
-        footer: "w-full sm:min-w-[300px] text-xs md:text-sm font-bold tracking-[0.1em] py-6 md:py-7 px-8 md:px-10 gap-4 md:gap-5"
+        primary: "w-full md:min-w-[300px] text-[10px] xs:text-xs md:text-sm font-bold tracking-[0.1em] py-5 md:py-7 px-6 md:px-10 gap-3 md:gap-5",
+        nav: "min-w-[160px] sm:min-w-[200px] text-[9px] sm:text-[11px] font-black tracking-[0.15em] py-3.5 sm:py-4 px-6 sm:px-8 gap-2 sm:gap-3",
+        footer: "w-full sm:min-w-[300px] text-[10px] xs:text-xs md:text-sm font-bold tracking-[0.1em] py-5 md:py-7 px-6 md:px-10 gap-3 md:gap-5"
     }
 
     return (
@@ -52,7 +52,7 @@ export const CTAButton = ({
                 rel={finalRel}
                 className={cn(baseStyles, variants[variant])}
             >
-                <span className="relative z-10 uppercase font-black tracking-[0.2em]">{children}</span>
+                <span className="relative z-10 uppercase font-black tracking-[0.1em] sm:tracking-[0.2em]">{children}</span>
                 {Icon && (
                     <Icon className={cn(
                         "text-[#39F265] fill-current drop-shadow-[0_0_8px_rgba(57,242,101,0.5)]",

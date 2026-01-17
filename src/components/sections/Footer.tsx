@@ -29,11 +29,11 @@ export const FinalCTA = () => {
                         <span className="text-[10px] font-black text-[#39F265] uppercase tracking-[0.2em]">Sessão Final de Protocolo</span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-8 sm:mb-10 leading-[1.1] sm:leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
+                    <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-6 sm:mb-10 leading-[1.2] sm:leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
                         Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">operacional?</span>
                     </h2>
 
-                    <p className="text-[#FEFDFA]/40 text-lg md:text-xl max-w-2xl mx-auto mb-16 leading-relaxed">
+                    <p className="text-[#FEFDFA]/40 text-base md:text-xl max-w-2xl mx-auto mb-12 sm:mb-16 leading-relaxed">
                         Deixe o Financeiro, o Comercial e o Marketing com quem respira eficiência. Agende seu diagnóstico e descubra quanto você pode economizar delegando para a Zaeom.
                     </p>
 
@@ -88,7 +88,7 @@ export const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16">
                         <div>
                             <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">Empresa</h4>
                             <ul className="space-y-4 text-[#FEFDFA]/40 text-sm">

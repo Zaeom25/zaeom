@@ -93,7 +93,7 @@ export const Hero = () => {
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <motion.div
                     style={{ y: y1 }}
-                    className="absolute top-[10%] left-[-10%] w-[800px] h-[800px] bg-[#39F265]/5 rounded-full blur-[80px] lg:blur-[160px]"
+                    className="absolute top-[10%] left-[-20%] sm:left-[-10%] w-[300px] sm:w-[800px] h-[300px] sm:h-[800px] bg-[#39F265]/5 rounded-full blur-[60px] lg:blur-[160px]"
                 />
             </div>
 
@@ -117,7 +117,7 @@ export const Hero = () => {
                         <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">V. 2026</span>
                     </div>
 
-                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold md:font-black mb-6 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.05] md:leading-[0.9] tracking-[-0.03em] md:tracking-[-0.04em] text-[#FEFDFA]">
+                    <h1 className="text-[2.5rem] xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold md:font-black mb-6 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-[-0.02em] md:tracking-[-0.04em] text-[#FEFDFA]">
                         {"Sua Empresa no".split(" ").map((word, i) => (
                             <motion.span
                                 key={i}

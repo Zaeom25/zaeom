@@ -129,10 +129,10 @@ export const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="fixed inset-0 z-[105] bg-[#080808] lg:hidden flex flex-col p-6 pt-24"
+                        className="fixed inset-0 z-[105] bg-[#080808] lg:hidden flex flex-col p-6 pt-20 overflow-y-auto"
                     >
 
-                        <div className="relative z-10 space-y-8">
+                        <div className="relative z-10 space-y-6">
                             {navItems.map((item, i) => (
                                 <motion.a
                                     key={item.name}
@@ -141,12 +141,12 @@ export const Navbar = () => {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.2, delay: i * 0.05 }}
-                                    className="flex items-center justify-between group"
+                                    className="flex items-center justify-between group py-2"
                                 >
-                                    <span className="text-3xl sm:text-4xl font-black text-[#FEFDFA] uppercase tracking-tighter group-hover:text-[#39F265] transition-colors">
+                                    <span className="text-xl sm:text-3xl font-black text-[#FEFDFA] uppercase tracking-tighter group-hover:text-[#39F265] transition-colors">
                                         {item.name}
                                     </span>
-                                    <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 text-[#39F265] opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
+                                    <ChevronRight className="w-5 h-5 sm:w-8 sm:h-8 text-[#39F265] opacity-50 block group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
                                 </motion.a>
                             ))}
                         </div>
