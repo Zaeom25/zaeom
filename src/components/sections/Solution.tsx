@@ -1,7 +1,8 @@
 import React from "react"
 import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { Bot, User, Zap, Gem, CheckCircle2, ArrowUpRight, Cpu, Layers, Globe } from "lucide-react"
+import { Bot, User, Zap, Gem, ArrowUpRight, Layers } from "lucide-react"
+import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 
 const agents = [
     {
@@ -9,48 +10,52 @@ const agents = [
         id: "01",
         label: "AUTOMATED",
         title: "Agente de IA",
-        description: "Automação total 24/7 para triagem e suporte básico. O motor que nunca dorme.",
-        features: ["Resposta Instantânea", "Atendimento Infinito", "Custo Mínimo"],
+        description: "Execução massiva de tarefas repetitivas. Do suporte inicial à emissão de notas fiscais, o motor que nunca dorme.",
+        features: ["RESPOSTA INSTANTÂNEA", "ESCALA INFINITA", "ZERO ERRO HUMANO"],
         colSpan: "md:col-span-2",
-        bg: "bg-[#39F265]/5"
+        bg: "bg-[#39F265]/5",
+        waMessage: WHATSAPP_MESSAGES.AGENT_IA
     },
     {
         icon: User,
         id: "02",
-        label: "ELITE CLOSERS",
+        label: "HUMAN EXPERTS",
         title: "Agente Humano",
-        description: "Especialistas treinados para fechamento de vendas complexas e delicadas.",
-        features: ["Alta Conversão", "Negociação Real", "Empatia Total"],
+        description: "Especialistas reais para demandas sensíveis. Negociação, gestão de crises e decisões estratégicas complexas.",
+        features: ["EMPATIA TOTAL", "JULGAMENTO CRÍTICO", "GESTÃO ESTRATÉGICA"],
         colSpan: "md:col-span-1",
-        bg: "bg-transparent"
+        bg: "bg-transparent",
+        waMessage: WHATSAPP_MESSAGES.AGENT_HUMAN
     },
     {
         icon: Zap,
         id: "03",
         label: "BALANCE",
         title: "Agente Híbrido",
-        description: "O melhor dos dois mundos. IA triagem e Humano fecha em sincronia total.",
-        features: ["Eficiência Máxima", "Escalabilidade", "Quesito Especial"],
+        description: "O melhor dos dois mundos. A IA processa o volume operacional e o Humano garante a qualidade da entrega final.",
+        features: ["EFICIÊNCIA MÁXIMA", "SUPERVISÃO DE QUALIDADE", "CUSTO OTIMIZADO"],
         colSpan: "md:col-span-1",
-        bg: "bg-transparent"
+        bg: "bg-transparent",
+        waMessage: WHATSAPP_MESSAGES.AGENT_HYBRID
     },
     {
         icon: Gem,
         id: "04",
         label: "BESPOKE",
         title: "Agente Personalizado",
-        description: "Soluções sob medida para fluxos comerciais ultra-específicos e complexos.",
-        features: ["White Label", "Integração Full", "Suporte VIP"],
+        description: "Arquitetura exclusiva desenhada sob medida para fluxos operacionais únicos ou integrações de sistemas legados.",
+        features: ["WHITE LABEL", "SUPORTE VIP DEDICADO", "INTEGRAÇÃO FULL"],
         colSpan: "md:col-span-2",
-        bg: "bg-[#39F265]/5"
+        bg: "bg-[#39F265]/5",
+        waMessage: WHATSAPP_MESSAGES.AGENT_CUSTOM
     }
 ]
 
 export const Solution = () => {
     return (
-        <section className="py-24 md:py-40 px-6 relative" id="solucoes">
+        <section className="py-12 md:py-40 px-6 relative" id="solucoes">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16 md:mb-20 border-b border-[#FEFDFA]/5 pb-12 md:pb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 mb-12 md:mb-20 border-b border-[#FEFDFA]/5 pb-10 md:pb-16">
                     <div className="max-w-4xl">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -98,15 +103,18 @@ export const Solution = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {agents.map((agent, index) => (
-                        <motion.div
+                        <motion.a
                             key={index}
+                            href={getWhatsappLink(agent.waMessage)}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
                             viewport={{ once: true }}
-                            className={`${agent.colSpan}`}
+                            className={`${agent.colSpan} block`}
                         >
-                            <Card className={`group relative h-full flex flex-col p-10 glass-card border-[#FEFDFA]/5 hover:border-[#39F265]/30 transition-all duration-700 overflow-hidden rounded-[2.5rem] ${agent.bg}`}>
+                            <Card className={`group relative h-full flex flex-col p-10 glass-card border-[#FEFDFA]/5 hover:border-[#39F265]/30 transition-all duration-700 overflow-hidden rounded-[2.5rem] cursor-pointer ${agent.bg}`}>
 
                                 <div className="absolute top-10 right-10 text-5xl font-black text-[#FEFDFA]/[0.03] leading-none pointer-events-none group-hover:text-[#39F265]/[0.1] transition-all duration-700 font-mono italic">
                                     /{agent.id}
@@ -149,7 +157,7 @@ export const Solution = () => {
                                 {/* Interior Glow Overlay */}
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#39F265]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                             </Card>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>

@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronRight } from "lucide-react"
+import { Menu, X, ChevronRight, MousePointer2 } from "lucide-react"
 import logoZaeom from "@/assets/logo-zaeom.svg"
+
+import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
+
+import { CTAButton } from "@/components/ui/CTAButton"
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -75,16 +79,12 @@ export const Navbar = () => {
 
                         <div className="h-6 w-[1px] bg-[#FEFDFA]/10 mx-2" />
 
-                        <div className="group relative">
-                            <button
-                                onClick={(e) => handleAnchorClick(e, "#solucoes")}
-                                className="group inline-flex min-w-[180px] cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:scale-105 border border-white/10 text-[11px] font-black text-white tracking-[0.2em] bg-white/5 backdrop-blur-xl rounded-xl py-4 px-8 relative items-center justify-center overflow-hidden"
-                            >
-                                <span className="relative z-10 uppercase">INICIAR PROTOCOLO</span>
-                                <div className="absolute inset-0 bg-gradient-to-tr from-[#39F265]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <span aria-hidden="true" className="transition-all duration-500 group-hover:opacity-80 opacity-20 w-[60%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2" style={{ background: 'linear-gradient(90deg, rgba(57, 242, 101, 0) 0%, rgba(57, 242, 101, 1) 50%, rgba(57, 242, 101, 0) 100%)' }}></span>
-                            </button>
-                        </div>
+                        <CTAButton
+                            href={getWhatsappLink(WHATSAPP_MESSAGES.PROTOCOL)}
+                            variant="nav"
+                        >
+                            Agendar Diagnóstico
+                        </CTAButton>
                     </div>
                 </motion.nav>
             </div>
@@ -152,21 +152,20 @@ export const Navbar = () => {
                         </div>
 
                         <div className="mt-auto relative z-10">
-                            <button
-                                onClick={(e) => handleAnchorClick(e, "#solucoes")}
-                                className="w-full py-6 rounded-2xl bg-[#39F265] text-[#080808] font-black uppercase tracking-[0.2em] shadow-[0_20px_40px_rgba(57,242,101,0.3)] active:scale-95 transition-transform"
+                            <CTAButton
+                                href={getWhatsappLink(WHATSAPP_MESSAGES.PROTOCOL)}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="w-full"
                             >
-                                INICIAR AGORA
-                            </button>
-                            <p className="text-center mt-8 text-[9px] font-bold text-[#FEFDFA]/20 uppercase tracking-[0.5em]">
-                                PROTOCOLO ZAEOM Z-01
-                            </p>
+                                Agendar Diagnóstico
+                            </CTAButton>
                         </div>
+                        <p className="text-center mt-8 text-[9px] font-bold text-[#FEFDFA]/20 uppercase tracking-[0.5em]">
+                            PROTOCOLO ZAEOM Z-01
+                        </p>
                     </motion.div>
                 )}
             </AnimatePresence>
-
-
         </div>
     )
 }

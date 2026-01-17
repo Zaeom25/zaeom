@@ -1,9 +1,11 @@
 import React from "react"
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Zap } from "lucide-react"
+import { Zap, MousePointer2 } from "lucide-react"
 import logoZaeom from "@/assets/logo-zaeom.svg"
 import logoLumo from "@/assets/logo-lumo.svg"
+import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
+import { CTAButton } from "@/components/ui/CTAButton"
+import { PrivacyModal } from "@/components/ui/PrivacyModal"
 
 export const FinalCTA = () => {
     return (
@@ -28,39 +30,21 @@ export const FinalCTA = () => {
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-8 sm:mb-10 leading-[1.1] sm:leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
-                        Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">funil?</span>
+                        Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">operacional?</span>
                     </h2>
 
                     <p className="text-[#FEFDFA]/40 text-lg md:text-xl max-w-2xl mx-auto mb-16 leading-relaxed">
-                        Deixe o operacional com quem entende e foque na estratégia que vai fazer seu negócio dobrar de tamanho este ano.
+                        Deixe o Financeiro, o Comercial e o Marketing com quem respira eficiência. Agende seu diagnóstico e descubra quanto você pode economizar delegando para a Zaeom.
                     </p>
 
                     <div className="flex justify-center">
-                        <div className="inline-block group relative">
-                            <button
-                                onClick={() => {
-                                    const el = document.getElementById('solucoes');
-                                    if (el) {
-                                        const offset = 80;
-                                        const bodyRect = document.body.getBoundingClientRect().top;
-                                        const elementRect = el.getBoundingClientRect().top;
-                                        const elementPosition = elementRect - bodyRect;
-                                        const offsetPosition = elementPosition - offset;
-                                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                                    }
-                                }}
-                                className="group inline-flex w-full sm:min-w-[280px] cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.02] border border-white/10 text-md font-extrabold text-white tracking-tight bg-white/5 backdrop-blur-2xl rounded-2xl py-6 px-10 relative items-center justify-center gap-4 overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]"
-                            >
-                                <span className="relative z-10 uppercase font-black tracking-widest whitespace-nowrap">QUERO COMEÇAR AGORA</span>
-                                <Zap className="w-5 h-5 text-[#39F265] fill-current drop-shadow-[0_0_8px_rgba(57,242,101,0.5)]" />
-
-                                {/* Inner Gradient Reflection */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-[#39F265]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            </button>
-
-                            {/* External Aesthetic Glow */}
-                            <span className="pointer-events-none absolute -bottom-4 left-1/2 z-0 h-10 w-48 -translate-x-1/2 rounded-full opacity-0 transition-all duration-500 ease-out group-hover:opacity-100" style={{ background: 'radial-gradient(60% 100% at 50% 50%, rgba(57, 242, 101, 0.4), transparent 80%)', filter: 'blur(15px)' }} aria-hidden="true"></span>
-                        </div>
+                        <CTAButton
+                            href={getWhatsappLink(WHATSAPP_MESSAGES.PROTOCOL)}
+                            icon={Zap}
+                            variant="footer"
+                        >
+                            Otimizar Minha Empresa
+                        </CTAButton>
                     </div>
                 </div>
 
@@ -72,14 +56,35 @@ export const FinalCTA = () => {
 }
 
 export const Footer = () => {
+    const [isPrivacyOpen, setIsPrivacyOpen] = React.useState(false)
+
+    const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (!href.startsWith("#")) return
+        e.preventDefault()
+        const targetId = href.replace("#", "")
+        const element = document.getElementById(targetId)
+        if (element) {
+            const offset = 80
+            const bodyRect = document.body.getBoundingClientRect().top
+            const elementRect = element.getBoundingClientRect().top
+            const elementPosition = elementRect - bodyRect
+            const offsetPosition = elementPosition - offset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            })
+        }
+    }
+
     return (
-        <footer className="py-20 px-6 border-t border-[#FEFDFA]/5 bg-black">
-            <div className="max-w-6xl mx-auto">
+        <footer className="py-20 px-6 border-t border-[#FEFDFA]/5 bg-black relative">
+            <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row justify-between gap-12 mb-20">
                     <div className="max-w-xs">
                         <img src={logoZaeom} alt="Zaeom Logo" className="h-10 w-auto mb-6" />
                         <p className="text-[#FEFDFA]/40 text-sm leading-relaxed">
-                            Inteligência e autonomia para negócios que não aceitam limites. Transformando a gestão comercial em uma máquina de escala.
+                            Arquitetura de autonomia e protocolos neurais projetados para devolver o ativo mais valioso da sua gestão: o tempo.
                         </p>
                     </div>
 
@@ -87,17 +92,39 @@ export const Footer = () => {
                         <div>
                             <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">Empresa</h4>
                             <ul className="space-y-4 text-[#FEFDFA]/40 text-sm">
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">Sobre Nós</a></li>
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">Carreiras</a></li>
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">Politica de Privacidade</a></li>
+                                <li>
+                                    <a
+                                        href="#sobre"
+                                        onClick={(e) => handleAnchorClick(e, "#sobre")}
+                                        className="hover:text-[#39F265] transition-colors"
+                                    >
+                                        Sobre Nós
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#resultados"
+                                        onClick={(e) => handleAnchorClick(e, "#resultados")}
+                                        className="hover:text-[#39F265] transition-colors"
+                                    >
+                                        Resultados
+                                    </a>
+                                </li>
+                                <li>
+                                    <button
+                                        onClick={() => setIsPrivacyOpen(true)}
+                                        className="hover:text-[#39F265] transition-colors text-left"
+                                    >
+                                        Política de Privacidade
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                         <div>
                             <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">Contato</h4>
                             <ul className="space-y-4 text-[#FEFDFA]/40 text-sm">
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">suporte@zaeom.com</a></li>
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">vendas@zaeom.com</a></li>
-                                <li><a href="#" className="hover:text-[#39F265] transition-colors">+55 (11) 9999-9999</a></li>
+                                <li><a href="mailto:contato@zaeom.com" className="hover:text-[#39F265] transition-colors">contato@zaeom.com</a></li>
+                                <li><a href={getWhatsappLink(WHATSAPP_MESSAGES.GENERAL)} target="_blank" rel="noopener noreferrer" className="hover:text-[#39F265] transition-colors">+55 (11) 9999-9999</a></li>
                             </ul>
                         </div>
                     </div>
@@ -161,6 +188,8 @@ export const Footer = () => {
                     <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FEFDFA]/5 to-transparent" />
                 </div>
             </div>
+
+            <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
         </footer>
     )
 }

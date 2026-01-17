@@ -5,8 +5,10 @@ import { Navbar } from "@/components/sections/Navbar"
 import { Hero } from "@/components/sections/Hero"
 import { Diagnosis } from "@/components/sections/Diagnosis"
 import { Solution } from "@/components/sections/Solution"
+import { About } from "@/components/sections/About"
 import { HowItWorks } from "@/components/sections/HowItWorks"
 import { SocialProof } from "@/components/sections/SocialProof"
+import { VideoTestimonials } from "@/components/sections/VideoTestimonials"
 import { FAQ } from "@/components/sections/FAQ"
 import { FinalCTA, Footer } from "@/components/sections/Footer"
 
@@ -57,7 +59,9 @@ function App() {
 
         <Diagnosis />
         <Solution />
+        <About />
         <HowItWorks />
+        <VideoTestimonials />
         <SocialProof />
         <FAQ />
         <FinalCTA />

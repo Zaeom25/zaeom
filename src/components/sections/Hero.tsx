@@ -1,6 +1,8 @@
 import React from "react"
 import { motion, useScroll, useTransform, useSpring, useMotionValue, useInView } from "framer-motion"
-import { Clock, MousePointer2, Brain, Target, MessageSquare, Shield, Activity, BarChart3 } from "lucide-react"
+import { MousePointer2, Database, Filter, Shield, Activity, BarChart3, Zap } from "lucide-react"
+import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
+import { CTAButton } from "@/components/ui/CTAButton"
 
 const NumberTicker = ({ value, suffix = "", decimals = 0, delay = 0 }: { value: number, suffix?: string, decimals?: number, delay?: number }) => {
     const ref = React.useRef<HTMLSpanElement>(null)
@@ -37,12 +39,19 @@ const NumberTicker = ({ value, suffix = "", decimals = 0, delay = 0 }: { value: 
 
 const NeuralFeature = ({ icon: Icon, title, description, badge }: { icon: any, title: string, description: string, badge?: string }) => {
     return (
-        <div className="relative p-8 flex flex-col items-start text-left group transition-all duration-500">
-            {/* Technical HUD Marker */}
-            <div className="absolute top-0 left-0 w-3 h-px bg-[#39F265]/30" />
-            <div className="absolute top-0 left-0 h-3 w-px bg-[#39F265]/30" />
+        <div className="spotlight-card relative p-8 flex flex-col items-start text-left group transition-all duration-500 rounded-[2rem] overflow-hidden min-h-full hover:bg-[#FEFDFA]/[0.02]">
+            {/* O HUD Arredondado - Ajustado para w-8 para casar perfeitamente com o raio de 2rem (32px) */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-[#39F265]/30 rounded-tl-[2rem] group-hover:border-[#39F265] transition-all duration-500" />
 
-            <div className="relative">
+            {/* O efeito de luz que se adapta ao mouse no hover */}
+            <div
+                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                    background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(57, 242, 101, 0.08), transparent 80%)`
+                }}
+            />
+
+            <div className="relative z-10 w-full">
                 <div className="inline-flex items-center gap-2 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-[#39F265]/5 border border-[#39F265]/10 flex items-center justify-center group-hover:bg-[#39F265]/10 group-hover:scale-110 transition-all duration-500">
                         <Icon className="w-5 h-5 text-[#39F265]" />
@@ -57,9 +66,6 @@ const NeuralFeature = ({ icon: Icon, title, description, badge }: { icon: any, t
                 <h3 className="text-lg font-bold text-[#FEFDFA] mb-3 tracking-tight group-hover:text-[#39F265] transition-colors duration-500">{title}</h3>
                 <p className="text-sm md:text-sm text-[#FEFDFA]/40 md:text-[#FEFDFA]/30 leading-relaxed max-w-full md:max-w-[280px] group-hover:text-[#FEFDFA]/50 transition-colors duration-500">{description}</p>
             </div>
-
-            {/* Subtle glow behind icon on hover */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#39F265]/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
         </div>
     )
 }
@@ -105,14 +111,14 @@ export const Hero = () => {
                     <div className="inline-flex items-center gap-1.5 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-6 md:mb-12 overflow-hidden group">
                         <div className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#39F265] whitespace-nowrap">Neural System Active</span>
+                            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#39F265] whitespace-nowrap">ZAEOM OPERATING SYSTEM</span>
                         </div>
                         <div className="w-px h-3 bg-[#39F265]/20" />
-                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">Protocolo Z-1 / 2026</span>
+                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">V. 2026</span>
                     </div>
 
-                    <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold mb-8 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-tight md:tracking-[-0.04em] text-[#FEFDFA]">
-                        {"Transforme a sua".split(" ").map((word, i) => (
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold md:font-black mb-6 md:mb-10 max-w-6xl mx-auto px-4 text-balance leading-[1.05] md:leading-[0.9] tracking-[-0.03em] md:tracking-[-0.04em] text-[#FEFDFA]">
+                        {"Sua Empresa no".split(" ").map((word, i) => (
                             <motion.span
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
@@ -129,7 +135,7 @@ export const Hero = () => {
                             transition={{ duration: 1.2, delay: 0.5 }}
                             className="text-gradient block"
                         >
-                            Gestão Comercial
+                            Piloto Automático
                         </motion.span>
                     </h1>
 
@@ -137,41 +143,26 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        className="max-w-4xl mx-auto mb-16 px-4"
+                        className="max-w-3xl mx-auto mb-10 md:mb-16 px-6"
                     >
-                        <p className="text-lg md:text-xl lg:text-2xl text-[#FEFDFA]/50 leading-relaxed font-medium text-balance">
-                            Ative agentes de IA de alta fidelidade para converter, agendar e gerir seus leads no piloto automático.
-                            Reduza custos operacionais em <span className="text-[#39F265]">38%</span> e garanta a previsibilidade que sua escala exige.
+                        <p className="text-sm md:text-xl lg:text-2xl text-[#FEFDFA]/50 md:text-[#FEFDFA]/60 leading-[1.6] md:leading-[1.6] font-medium tracking-tight">
+                            Não somos apenas uma ferramenta, somos o seu braço operacional completo. Unimos IA com expertise humana para você economizar e focar no crescimento.
                         </p>
                     </motion.div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-24 md:mb-32">
-                        <div className="inline-block group relative w-full md:w-auto px-4 md:px-0">
-                            <button
-                                onClick={() => {
-                                    const el = document.getElementById('solucoes');
-                                    if (el) {
-                                        const offset = 80;
-                                        const bodyRect = document.body.getBoundingClientRect().top;
-                                        const elementRect = el.getBoundingClientRect().top;
-                                        const elementPosition = elementRect - bodyRect;
-                                        const offsetPosition = elementPosition - offset;
-                                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                                    }
-                                }}
-                                className="group inline-flex w-full md:min-w-[300px] cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.02] border border-white/10 text-xs md:text-sm font-bold text-white tracking-[0.1em] bg-white/5 backdrop-blur-3xl rounded-2xl py-6 md:py-7 px-8 md:px-10 relative items-center justify-center gap-4 md:gap-5 overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.6)]"
+                        <div className="w-full md:w-auto px-4 md:px-0">
+                            <CTAButton
+                                href={getWhatsappLink(WHATSAPP_MESSAGES.GENERAL)}
+                                icon={MousePointer2}
                             >
-                                <span className="relative z-10 uppercase font-black tracking-[0.2em]">INICIAR PROTOCOLO</span>
-                                <MousePointer2 className="w-5 h-5 md:w-6 md:h-6 text-[#39F265] fill-current drop-shadow-[0_0_8px_rgba(57,242,101,0.5)] rotate-90" />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-[#39F265]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#39F265]/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-                            </button>
-                            <span className="pointer-events-none absolute -bottom-10 left-1/2 z-0 h-20 w-72 -translate-x-1/2 rounded-full opacity-0 transition-all duration-700 ease-out group-hover:opacity-100" style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(57, 242, 101, 0.25), transparent 85%)', filter: 'blur(30px)' }} aria-hidden="true"></span>
+                                Agendar Diagnóstico
+                            </CTAButton>
                         </div>
 
                         <div className="flex items-center gap-6 md:gap-8 md:pl-10 md:border-l border-[#FEFDFA]/10">
                             <div className="text-center md:text-left">
-                                <p className="text-[9px] md:text-[10px] font-black text-[#FEFDFA]/30 uppercase tracking-[0.3em] mb-2 md:mb-3">Supporting Infrastructure</p>
+                                <p className="text-[9px] md:text-[10px] font-black text-[#FEFDFA]/30 uppercase tracking-[0.3em] mb-2 md:mb-3">Apoio Institucional</p>
                                 <div className="flex gap-4 md:gap-6 items-center justify-center md:justify-start opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
                                     <span className="text-[10px] md:text-xs font-black text-[#FEFDFA] tracking-tighter uppercase">ABSTARTUPS</span>
                                     <span className="text-[10px] md:text-xs font-black text-[#FEFDFA] tracking-tighter uppercase">SEBRAE</span>
@@ -201,20 +192,13 @@ export const Hero = () => {
                         }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16 relative py-12"
                     >
-                        <div
-                            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 mix-blend-screen"
-                            style={{
-                                background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(57, 242, 101, 0.08), transparent 80%)`
-                            }}
-                        />
-
                         {[
-                            { icon: Brain, badge: "Core Logic", title: "Enriquecimento de Dados", desc: "Captura automática de informações detalhadas de cada lead para personalização extrema." },
-                            { icon: Target, badge: "Execution", title: "Qualificação em Tempo Real", desc: "Algoritmos que identificam o potencial de compra instantaneamente após o contato." },
-                            { icon: MessageSquare, badge: "Interface", title: "Agendamento Direto", desc: "Nossa IA reserva a agenda do seu vendedor com leads prontos para o fechamento." },
-                            { icon: Activity, badge: "Learning", title: "Otimização de Conversão", desc: "Ajuste contínuo do script baseado em milhões de interações bem-sucedidas." },
-                            { icon: BarChart3, badge: "Output", title: "Insights Preditivos", desc: "Previsibilidade real de faturamento com base no comportamento atual do seu funil." },
-                            { icon: Shield, badge: "System", title: "Segurança e Escala", desc: "Infraestrutura dedicada capaz de processar milhares de leads sem perda de qualidade." }
+                            { icon: Database, badge: "Data Core", title: "Gestão de Informação Centralizada", desc: "Captura e organização automática de dados de clientes, fornecedores e parceiros. Sua base de conhecimento sempre atualizada." },
+                            { icon: Filter, badge: "Priority Engine", title: "Triagem Inteligente 24/7", desc: "Algoritmos que filtram o que é prioridade. Seja um lead quente, uma nota fiscal pendente ou um suporte urgente, nada passa despercebido." },
+                            { icon: Zap, badge: "Task Agent", title: "Execução Autônoma", desc: "Nossa IA não apenas agenda reuniões, ela executa tarefas: envia boletos, confirma presenças e responde dúvidas rotineiras." },
+                            { icon: Activity, badge: "Network Flow", title: "Otimização de Processos", desc: "Melhora contínua dos fluxos de trabalho. Identificamos gargalos operacionais e ajustamos a rota para máxima eficiência." },
+                            { icon: BarChart3, badge: "Predictive", title: "Previsibilidade de Resultados", desc: "Tenha clareza total. Relatórios que cruzam dados financeiros, comerciais e de produtividade para decisões baseadas em fatos." },
+                            { icon: Shield, badge: "Infrastructure", title: "Segurança e Escala", desc: "Infraestrutura robusta preparada para escalar sua empresa. Cresça 10x sem precisar contratar 10x mais funcionários." }
                         ].map((feature, i) => (
                             <motion.div
                                 key={i}

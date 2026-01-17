@@ -183,6 +183,32 @@
   }
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 10px;
+  border: 2px solid #030303;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39F265;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #111111 #030303;
+}
+
 canvas[data-us-project] {
   display: block;
   width: 100% !important;
