@@ -13,6 +13,7 @@ import { FAQ } from "@/components/sections/FAQ"
 import { FinalCTA, Footer } from "@/components/sections/Footer"
 
 import { InteractiveBackground } from "@/components/ui/InteractiveBackground"
+import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp"
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,7 @@ function App() {
       <div className="grain" />
       <div className="mesh-gradient" />
       <InteractiveBackground />
+      <FloatingWhatsApp />
 
       <Navbar />
 
