@@ -202,12 +202,11 @@ export const VideoTestimonials = () => {
     const containerRef = React.useRef<HTMLDivElement>(null)
 
     const videos = [
-        { id: "qWrcPix5-RQ", client: "Nexus Ops", title: "A revolução na nossa triagem de leads" },
-        { id: "jNQXAC9IVRw", client: "Innovate Group", title: "Escalando 10x sem contratar mais" },
-        { id: "9bZkp7q19f0", client: "Alpha Digital", title: "Agente autônomo é o futuro da gestão" },
-        { id: "L_jWHffIx5E", client: "Future Logistics", title: "Eficiência operacional no piloto automático" },
-        { id: "60ItHLz5WEA", client: "Smart Core", title: "Segurança total nos nossos dados" },
-        { id: "M7lc1UVf-VE", client: "Global Tech", title: "Otimização de processos em 30 dias" }
+        { id: "Nl-to1fs9Rs", client: "@heitorcastromqm", title: "'Zaeom, um grande aditivo à empresa.'" },
+        { id: "dWTbOo8G8B4", client: "@cassim", title: "'A Zaeom entrega resultados.'" },
+        { id: "bzDqFUGKuHE", client: "@falafrancescomjerome", title: "'Eles são muito bons no que eles fazem.'" },
+        { id: "__SZ19zMcDw", client: "@francianymadeira", title: "'Eu só tenho elogios para fazer.'" },
+        { id: "gEoYiTcJv_w", client: "@karinavieira.oficial", title: "'Cumpriram com tudo que a gente combinou.'" },
     ]
 
     const [slidesToShow, setSlidesToShow] = React.useState(1)
@@ -241,7 +240,7 @@ export const VideoTestimonials = () => {
     }
 
     return (
-        <section className="py-24 md:py-40 px-6 relative overflow-hidden bg-dot-pattern" id="depoimentos">
+        <section className="pt-24 md:pt-40 pb-0 px-6 relative overflow-hidden bg-dot-pattern" id="depoimentos">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                     <div className="text-left">
