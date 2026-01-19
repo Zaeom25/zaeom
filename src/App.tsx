@@ -3,14 +3,17 @@ import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 import { Navbar } from "@/components/sections/Navbar"
 import { Hero } from "@/components/sections/Hero"
-import { Diagnosis } from "@/components/sections/Diagnosis"
-import { Solution } from "@/components/sections/Solution"
-import { About } from "@/components/sections/About"
-import { HowItWorks } from "@/components/sections/HowItWorks"
-import { SocialProof } from "@/components/sections/SocialProof"
-import { VideoTestimonials } from "@/components/sections/VideoTestimonials"
-import { FAQ } from "@/components/sections/FAQ"
-import { FinalCTA, Footer } from "@/components/sections/Footer"
+
+// Lazy load sections below the fold
+const Diagnosis = React.lazy(() => import("@/components/sections/Diagnosis").then(module => ({ default: module.Diagnosis })))
+const Solution = React.lazy(() => import("@/components/sections/Solution").then(module => ({ default: module.Solution })))
+const About = React.lazy(() => import("@/components/sections/About").then(module => ({ default: module.About })))
+const HowItWorks = React.lazy(() => import("@/components/sections/HowItWorks").then(module => ({ default: module.HowItWorks })))
+const SocialProof = React.lazy(() => import("@/components/sections/SocialProof").then(module => ({ default: module.SocialProof })))
+const VideoTestimonials = React.lazy(() => import("@/components/sections/VideoTestimonials").then(module => ({ default: module.VideoTestimonials })))
+const FAQ = React.lazy(() => import("@/components/sections/FAQ").then(module => ({ default: module.FAQ })))
+const FinalCTA = React.lazy(() => import("@/components/sections/Footer").then(module => ({ default: module.FinalCTA })))
+const Footer = React.lazy(() => import("@/components/sections/Footer").then(module => ({ default: module.Footer })))
 
 import { InteractiveBackground } from "@/components/ui/InteractiveBackground"
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp"
@@ -59,17 +62,21 @@ function App() {
       <main className="relative z-10 w-full">
         <Hero />
 
-        <Diagnosis />
-        <Solution />
-        <About />
-        <HowItWorks />
-        <VideoTestimonials />
-        <SocialProof />
-        <FAQ />
-        <FinalCTA />
+        <React.Suspense fallback={<div className="min-h-[400px]" />}>
+          <Diagnosis />
+          <Solution />
+          <About />
+          <HowItWorks />
+          <VideoTestimonials />
+          <SocialProof />
+          <FAQ />
+          <FinalCTA />
+        </React.Suspense>
       </main>
 
-      <Footer />
+      <React.Suspense fallback={null}>
+        <Footer />
+      </React.Suspense>
     </div>
   )
 }
