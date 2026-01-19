@@ -142,9 +142,20 @@ export const SocialProof = () => {
 
                 <div className="relative overflow-hidden">
                     <motion.div
-                        className="flex"
+                        className="flex cursor-grab active:cursor-grabbing"
                         animate={{ x: `-${currentIndex * (100 / slidesToShow)}%` }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        dragElastic={0.2}
+                        onDragEnd={(_, info) => {
+                            const threshold = 50
+                            if (info.offset.x < -threshold && currentIndex < maxIndex) {
+                                next()
+                            } else if (info.offset.x > threshold && currentIndex > 0) {
+                                prev()
+                            }
+                        }}
                     >
                         {testimonials.map((t_item, index) => (
                             <div

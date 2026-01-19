@@ -16,6 +16,13 @@ const NumberTicker = ({ value, suffix = "", decimals = 0, delay = 0 }: { value: 
 
     React.useEffect(() => {
         if (isInView) {
+            // Speed up or skip animation on mobile to save CPU
+            const isMobile = window.innerWidth < 768
+            if (isMobile) {
+                motionValue.set(value)
+                return
+            }
+
             const timer = setTimeout(() => {
                 motionValue.set(value)
             }, delay * 1000)
@@ -78,7 +85,7 @@ export const Hero = () => {
     const containerRef = React.useRef<HTMLDivElement>(null)
 
     const handleMouseMove = (e: React.MouseEvent) => {
-        if (!containerRef.current) return
+        if (!containerRef.current || window.innerWidth < 768) return
         const cards = containerRef.current.getElementsByClassName("spotlight-card")
         for (const card of cards as any) {
             const rect = card.getBoundingClientRect()
@@ -120,25 +127,32 @@ export const Hero = () => {
                     </div>
 
                     <h1 className="text-[2.2rem] xs:text-[2.6rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold md:font-black mb-6 md:mb-10 max-w-6xl mx-auto px-2 sm:px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-[-0.05em] md:tracking-[-0.04em] text-[#FEFDFA]">
-                        {t('hero.title_part1').split(" ").map((word, i) => (
+                        <span className="md:hidden">
+                            {t('hero.title_part1')}
+                            <span className="text-gradient block mt-1">{t('hero.title_part2')}</span>
+                        </span>
+
+                        <span className="hidden md:inline">
+                            {t('hero.title_part1').split(" ").map((word, i) => (
+                                <motion.span
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                    className="inline-block mr-[0.3em] last:mr-0"
+                                >
+                                    {word}
+                                </motion.span>
+                            ))}
                             <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                className="inline-block mr-[0.3em] last:mr-0"
+                                initial={{ opacity: 0, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, filter: "blur(0px)" }}
+                                transition={{ duration: 1.2, delay: 0.5 }}
+                                className="text-gradient block mt-1"
                             >
-                                {word}
+                                {t('hero.title_part2')}
                             </motion.span>
-                        ))}
-                        <motion.span
-                            initial={{ opacity: 0, filter: "blur(10px)" }}
-                            animate={{ opacity: 1, filter: "blur(0px)" }}
-                            transition={{ duration: 1.2, delay: 0.5 }}
-                            className="text-gradient block mt-1"
-                        >
-                            {t('hero.title_part2')}
-                        </motion.span>
+                        </span>
                     </h1>
 
                     <motion.div

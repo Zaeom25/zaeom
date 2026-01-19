@@ -59,36 +59,42 @@ export const Diagnosis = () => {
                             </div>
 
                             <h2 className="heading-xl text-5xl md:text-6xl lg:text-7xl mb-12 text-left text-balance leading-[1.05] tracking-tight">
-                                {t('diagnosis.title_part1').split(" ").map((word, i) => (
+                                <span className="md:hidden text-[#FEFDFA]">
+                                    {t('diagnosis.title_part1')} <span className="text-gradient">{t('diagnosis.title_part2')}</span> {t('diagnosis.title_part3')}
+                                </span>
+
+                                <span className="hidden md:inline">
+                                    {t('diagnosis.title_part1').split(" ").map((word, i) => (
+                                        <motion.span
+                                            key={i}
+                                            initial={{ opacity: 0, y: 15 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                                            className="inline-block mr-[0.2em] text-[#FEFDFA]"
+                                        >
+                                            {word}
+                                        </motion.span>
+                                    ))}
                                     <motion.span
-                                        key={i}
-                                        initial={{ opacity: 0, y: 15 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
+                                        initial={{ opacity: 0, filter: "blur(10px)" }}
+                                        whileInView={{ opacity: 1, filter: "blur(0px)" }}
                                         viewport={{ once: true }}
-                                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                                        className="inline-block mr-[0.2em] text-[#FEFDFA]"
+                                        transition={{ duration: 1, delay: 0.4 }}
+                                        className="text-gradient block"
                                     >
-                                        {word}
+                                        {t('diagnosis.title_part2')}
                                     </motion.span>
-                                ))}
-                                <motion.span
-                                    initial={{ opacity: 0, filter: "blur(10px)" }}
-                                    whileInView={{ opacity: 1, filter: "blur(0px)" }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 1, delay: 0.4 }}
-                                    className="text-gradient block"
-                                >
-                                    {t('diagnosis.title_part2')}
-                                </motion.span>
-                                <motion.span
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.6 }}
-                                    className="text-[#FEFDFA]"
-                                >
-                                    {t('diagnosis.title_part3')}
-                                </motion.span>
+                                    <motion.span
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.8, delay: 0.6 }}
+                                        className="text-[#FEFDFA]"
+                                    >
+                                        {t('diagnosis.title_part3')}
+                                    </motion.span>
+                                </span>
                             </h2>
 
                             <motion.p
