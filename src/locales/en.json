@@ -260,5 +260,13 @@
             }
         },
         "footer": "Last update: January 2026 • Zaeom Protocol"
+    },
+    "whatsapp": {
+        "general": "Hi! I came through the website and would like to know more about how Zaeom can optimize my operation.",
+        "agent_ia": "Hi! I would like to know more about the AI Agent for massive task automation.",
+        "agent_human": "Hi! I would like to talk to a specialist about Zaeom's Human Agent for sensitive demands.",
+        "agent_hybrid": "Hi! I'm interested in the Hybrid Agent to balance technology and sensitivity in my operation.",
+        "agent_custom": "Hi! I would like a custom solution (Custom Agent) for my company's unique flows.",
+        "protocol": "Hi! I would like to start the Zaeom protocol and return the most valuable asset to my management: time."
     }
 }

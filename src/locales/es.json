@@ -260,5 +260,13 @@
             }
         },
         "footer": "Última actualización: Enero 2026 • Protocolo Zaeom"
+    },
+    "whatsapp": {
+        "general": "¡Hola! Vengo a través de la web e me gustaría saber más sobre cómo Zaeom puede optimizar mi operación.",
+        "agent_ia": "¡Hola! Me gustaría saber más sobre el Agente de IA para la automatización de tareas masivas.",
+        "agent_human": "¡Hola! Me gustaría hablar con un especialista sobre el Agente Humano de Zaeom para demandas sensibles.",
+        "agent_hybrid": "¡Hola! Estoy interesado en el Agente Híbrido para equilibrar tecnología y sensibilidad en mi operación.",
+        "agent_custom": "¡Hola! Me gustaría una solución a medida (Agente Personalizado) para los flujos únicos de mi empresa.",
+        "protocol": "¡Hola! Me gustaría iniciar el protocolo Zaeom y devolver el activo más valioso a mi gestión: el tiempo."
     }
 }
