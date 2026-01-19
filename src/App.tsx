@@ -54,7 +54,7 @@ function App() {
       {/* Aesthetic Overlays */}
       <div className="grain" />
       <div className="mesh-gradient" />
-      <InteractiveBackground />
+      {typeof window !== 'undefined' && window.innerWidth >= 768 && <InteractiveBackground />}
       <FloatingWhatsApp />
 
       <Navbar />
