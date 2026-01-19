@@ -1,0 +1,264 @@
+{
+    "navbar": {
+        "solutions": "Solutions",
+        "explore": "Explore",
+        "results": "Results",
+        "insights": "Insights",
+        "cta": "Schedule Now"
+    },
+    "hero": {
+        "subtitle_badge": "ZAEOM OPERATING SYSTEM",
+        "version": "V. 2026",
+        "title_part1": "Your Business on",
+        "title_part2": "Autopilot",
+        "description": "We're not just a tool, we're your complete operational arm. We unite AI with human expertise so you can save and focus on growth.",
+        "cta": "SCHEDULE DIAGNOSIS",
+        "support": "INSTITUTIONAL SUPPORT",
+        "features": {
+            "data_core": {
+                "badge": "Data",
+                "title": "Data Core",
+                "desc": "Intelligent centralization of all operational information."
+            },
+            "priority_engine": {
+                "badge": "Priority",
+                "title": "Priority Engine",
+                "desc": "Algorithms that identify and scale what truly brings profit."
+            },
+            "task_agent": {
+                "badge": "Agent",
+                "title": "Task Agents",
+                "desc": "AIs trained to execute manual tasks without human error."
+            },
+            "network_flow": {
+                "badge": "Network",
+                "title": "Network Flow",
+                "desc": "Fluid connection across all departments of your company."
+            },
+            "predictive": {
+                "badge": "Predictive",
+                "title": "Predictive Analytics",
+                "desc": "Anticipate trends and make decisions based on real data."
+            },
+            "infrastructure": {
+                "badge": "Infrastructure",
+                "title": "Secure Infrastructure",
+                "desc": "Russian protection layers to ensure data sovereignty."
+            }
+        },
+        "stats": {
+            "ia_interactions": "Neural Interactions",
+            "leads_generated": "Qualified Leads",
+            "companies_scale": "Companies Scaling"
+        }
+    },
+    "solutions": {
+        "badge": "Solutions Architecture",
+        "title_part1": "Autonomy",
+        "title_part2": "Protocols",
+        "description": "Autonomy architecture and neural protocols designed to return the most valuable asset of your management: time.",
+        "deploy": "ACTIVATE NOW",
+        "agents": {
+            "ai": {
+                "label": "PURE AI",
+                "title": "Autonomous Agents",
+                "description": "Neural systems working 24/7. They respond, qualify, and sell without human intervention.",
+                "f1": "3S RESPONSE",
+                "f2": "MULTILINGUAL",
+                "f3": "INFINITE SCALE"
+            },
+            "human": {
+                "label": "HUMAN BRAIN",
+                "title": "Executive Assistant",
+                "description": "Elite professionals handling scheduling, emails, and complex logistics of your life and business.",
+                "f1": "CROSS CULTURE",
+                "f2": "TOTAL DISCRETION",
+                "f3": "REAL DECISIONS"
+            },
+            "hybrid": {
+                "label": "CYBERNETIC",
+                "title": "Hybrid Flow",
+                "description": "The perfect match: AI for speed and Humans for sensitivity and high-ticket negotiations.",
+                "f1": "OPTIMIZED ROI",
+                "f2": "TOTAL CONTROL",
+                "f3": "FLUID HANDOFF"
+            },
+            "custom": {
+                "label": "PROJECT Z",
+                "title": "Custom Infrastructure",
+                "description": "We develop the ideal SOS (System) for your company. Absolute customization of processes and tools.",
+                "f1": "API FIRST",
+                "f2": "WHITE LABEL",
+                "f3": "Z SECURITY"
+            }
+        }
+    },
+    "about": {
+        "efficiency": "EFFICIENCY",
+        "efficiency_desc": "Radical optimization of flows.",
+        "trust": "TRUST",
+        "trust_desc": "Russian security protocols.",
+        "badge": "Inside Zaeom",
+        "title_part1": "Not Just Treating,",
+        "title_part2": "Evolving with",
+        "quote": "Time is the only asset we can't recover. My focus is ensuring you never lose it in operations again.",
+        "p1": "Zaeom was born from a brutal need for efficiency. We understand that modern entrepreneurs cannot be slaves to slow and flawed manual processes.",
+        "p2": "We implement an intelligence architecture that learns from your business, allowing a scale that was previously impossible without tripling fixed costs.",
+        "mission_label": "OUR MISSION",
+        "mission_text": "To free visionaries from",
+        "mission_highlight": "operational chaos",
+        "cta": "GET TO KNOW THE PROTOCOL"
+    },
+    "faq": {
+        "title": "Insights & Protocols",
+        "subtitle": "The answers you need to understand the autonomy revolution.",
+        "questions": {
+            "q1": "How does Zaeom's AI integrate with my WhatsApp?",
+            "a1": "We use official APIs and proprietary infrastructure to ensure your AI responds in milliseconds, maintaining your brand personality and collecting precious data from every interaction.",
+            "q2": "What's the difference between a virtual assistant and Zaeom?",
+            "a2": "Assistants execute tasks. Zaeom implements systems. Our hybrid approach combines elite professionals with advanced automation, creating an infrastructure that scales on its own.",
+            "q3": "Are my and my customers' data safe?",
+            "a3": "Security is our foundation. We follow rigorous encryption and data sovereignty protocols, inspired by global high-security standards, to ensure your business intelligence remains private.",
+            "q4": "How quickly do I see the first results?",
+            "a4": "Initial setup takes an average of 7 days. However, the time savings are immediate from the first day your autonomy protocol is activated."
+        }
+    },
+    "footer": {
+        "final_cta": {
+            "badge": "Final Protocol Session",
+            "title_part1": "Is there real time left, or is your money still stuck in",
+            "title_part2": "operations?",
+            "description": "Leave Finance, Sales, and Marketing to those who breathe efficiency. Schedule your diagnostic and find out how much you can save by delegating to Zaeom.",
+            "button": "Optimize My Business"
+        },
+        "description": "Autonomy architecture and neural protocols designed to return the most valuable asset of your management: time.",
+        "company": "Company",
+        "about": "About Us",
+        "results": "Results",
+        "privacy": "Privacy Policy",
+        "contact": "Contact",
+        "rights": "ALL RIGHTS RESERVED",
+        "made_with": "Made with",
+        "by": "by"
+    },
+    "diagnosis": {
+        "badge": "Efficiency Diagnosis",
+        "title_part1": "Do you feel you are",
+        "title_part2": "\"drowning\"",
+        "title_part3": "in operations?",
+        "description": "Most businesses die not from lack of sales, but from an excess of manual processes that generate paralysis.",
+        "fact_title": "The Inevitable Truth:",
+        "fact_desc": "You can delegate practically everything from your digital presence to our neural engines.",
+        "pain_points": {
+            "boring_work": {
+                "title": "Boring Work",
+                "status": "CRITICAL",
+                "desc": "Repetitive tasks that suck your productive energy every day."
+            },
+            "personal_life": {
+                "title": "Personal Life Aside",
+                "status": "HIGH RISK",
+                "desc": "Always connected, never rested. The business has become your prison."
+            },
+            "leads_cooling": {
+                "title": "Leads Cooling Down",
+                "status": "LEAKAGE",
+                "desc": "Delay in response causes potential customers to look for the competition."
+            },
+            "decision_stress": {
+                "title": "Decision Stress",
+                "status": "OVERLOAD",
+                "desc": "Too many micro-decisions that cause mental fatigue and paralysis."
+            }
+        }
+    },
+    "how_it_works": {
+        "badge": "Implementation Protocol",
+        "title_part1": "Simple, Fast, and",
+        "title_part2": "No Bureaucracy",
+        "steps": {
+            "s1": {
+                "label": "ANALYSIS",
+                "title": "Mapping Pain Points",
+                "desc": "We analyze your current flow and identify the operational bottlenecks preventing your growth."
+            },
+            "s2": {
+                "label": "IMPLEMENTATION",
+                "title": "Express Configuration",
+                "desc": "We activate your custom agent in record time. Russian speed on global infrastructure."
+            },
+            "s3": {
+                "label": "AUTHORIZATION",
+                "title": "Setting Limits",
+                "desc": "You decide where the AI stops and where the human touch takes full control of the negotiation."
+            },
+            "s4": {
+                "label": "SCALE",
+                "title": "Continuous Optimization",
+                "desc": "Real-time monitoring and fine-tuning to ensure every lead is converted with precision."
+            }
+        }
+    },
+    "social_proof": {
+        "badge": "Text Testimonials",
+        "title": "Who already changed the game with",
+        "subtitle": "Efficiency protocols validated by leaders who recovered their most valuable asset: time.",
+        "partner_badge": "Zaeom Partner"
+    },
+    "video_testimonials": {
+        "badge": "Social Proof / Z-1",
+        "title_part1": "Proof in",
+        "title_part2": "Practice",
+        "subtitle": "Real results told by those on the front lines of the fastest-growing companies.",
+        "card_footer": "Zaeom Client",
+        "testimonials": {
+            "v1": {
+                "title": "'Zaeom, a great addition to the company.'"
+            },
+            "v2": {
+                "title": "'Zaeom delivers results.'"
+            },
+            "v3": {
+                "title": "'They are very good at what they do.'"
+            },
+            "v4": {
+                "title": "'I only have praise to give.'"
+            },
+            "v5": {
+                "title": "'They fulfilled everything we agreed upon.'"
+            }
+        }
+    },
+    "privacy_modal": {
+        "title": "Privacy Policy",
+        "sections": {
+            "data_protection": {
+                "title": "Data Protection",
+                "content": "At Zaeom, the privacy and security of your operational data are our absolute priority. This policy details how we handle the information collected through our SOS (System)."
+            },
+            "collection": {
+                "title": "Information Collection",
+                "content": "We collect strictly necessary data for the operation of our AI protocols, including:",
+                "items": [
+                    "Contact Data: Name, email, and WhatsApp for appointments.",
+                    "Usage Metadata: Technical information for operator performance optimization.",
+                    "Operational Flows: Data voluntarily provided for custom model training."
+                ]
+            },
+            "usage": {
+                "title": "Data Usage",
+                "content": "Your data is used exclusively for:",
+                "items": [
+                    "Personalization of autonomous agent responses.",
+                    "Guaranteeing the security of hybrid infrastructure.",
+                    "Direct communications about your Z-01 protocol status."
+                ]
+            },
+            "transparency": {
+                "title": "Total Transparency",
+                "content": "We do not sell, share, or rent your data to third parties. Your company's most valuable asset is its business intelligence, and we protect it as such."
+            }
+        },
+        "footer": "Last update: January 2026 • Zaeom Protocol"
+    }
+}

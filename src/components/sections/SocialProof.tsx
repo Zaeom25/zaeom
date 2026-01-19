@@ -1,6 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Quote, Instagram, ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 const testimonials = [
     {
@@ -78,6 +79,7 @@ const testimonials = [
 ]
 
 export const SocialProof = () => {
+    const { t } = useTranslation()
     const [currentIndex, setCurrentIndex] = React.useState(0)
     const [slidesToShow, setSlidesToShow] = React.useState(1)
 
@@ -108,13 +110,14 @@ export const SocialProof = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-6">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#39F265]">Testemunhos em Texto</span>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#39F265]">{t('social_proof.badge')}</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl font-bold text-[#FEFDFA] mb-4 tracking-tighter">
-                                Quem já virou o jogo <br className="hidden md:block" /> com a <span className="text-gradient">Zaeom</span>
+                            <h2 className="text-4xl md:text-6xl font-bold text-[#FEFDFA] mb-6 tracking-tight leading-[1.1]">
+                                Quem já virou o jogo <br />
+                                com a <span className="text-gradient">Zaeom</span>
                             </h2>
-                            <p className="text-[#FEFDFA]/40 text-lg max-w-xl font-medium leading-relaxed italic text-balance">
-                                Protocolos de eficiência validados por líderes que recuperaram seu ativo mais valioso: o tempo.
+                            <p className="text-[#FEFDFA]/40 text-base md:text-lg max-w-xl font-medium leading-relaxed italic text-balance">
+                                {t('social_proof.subtitle')}
                             </p>
                         </motion.div>
                     </div>
@@ -143,38 +146,35 @@ export const SocialProof = () => {
                         animate={{ x: `-${currentIndex * (100 / slidesToShow)}%` }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        {testimonials.map((t, index) => (
+                        {testimonials.map((t_item, index) => (
                             <div
                                 key={index}
                                 className="flex-shrink-0 px-3"
                                 style={{ width: `${100 / slidesToShow}%` }}
                             >
                                 <div className="group relative p-8 md:p-10 bg-[#0A0A0A] border border-[#FEFDFA]/5 rounded-[2.5rem] hover:border-[#39F265]/30 transition-all duration-500 overflow-hidden flex flex-col h-[380px] md:h-[420px]">
-                                    {/* Subtle Glow */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#39F265]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                     <Quote className="w-8 h-8 text-[#39F265] mb-8 opacity-40 shrink-0" />
 
                                     <blockquote className="text-[#FEFDFA]/80 text-base md:text-lg leading-relaxed mb-8 italic relative z-10 flex-grow line-clamp-6">
-                                        "{t.text}"
+                                        "{t_item.text}"
                                     </blockquote>
 
                                     <div className="pt-6 border-t border-[#FEFDFA]/5 flex justify-between items-end relative z-10 shrink-0">
                                         <div>
-                                            <h4 className="font-bold text-[#FEFDFA] text-lg mb-1">{t.name}</h4>
-                                            {t.handle && (
+                                            <h4 className="font-bold text-[#FEFDFA] text-lg mb-1">{t_item.name}</h4>
+                                            {t_item.handle && (
                                                 <div className="flex items-center gap-1.5 text-[#39F265]/60 group-hover:text-[#39F265] transition-colors">
                                                     <Instagram className="w-3.5 h-3.5" />
-                                                    <span className="text-xs font-medium">{t.handle}</span>
+                                                    <span className="text-xs font-medium">{t_item.handle}</span>
                                                 </div>
                                             )}
                                         </div>
 
-                                        {t.featured && (
-                                            <div className="px-2.5 py-1 rounded-md bg-[#39F265]/10 border border-[#39F265]/20 text-[#39F265] text-[9px] font-black uppercase tracking-tighter">
-                                                Parceiro Zaeom
-                                            </div>
-                                        )}
+                                        <div className="px-2.5 py-1 rounded-md bg-[#39F265]/10 border border-[#39F265]/20 text-[#39F265] text-[9px] font-black uppercase tracking-tighter">
+                                            {t('social_proof.partner_badge')}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +193,6 @@ export const SocialProof = () => {
                 </div>
             </div>
 
-            {/* Background Decor */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-10">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-[#39F265]/20 to-transparent" />
             </div>

@@ -1,6 +1,7 @@
 import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Play, Youtube, ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 // Declaração global para o YouTube
 declare global {
@@ -11,6 +12,7 @@ declare global {
 }
 
 const VideoCard = ({ videoId, title, client }: { videoId: string, title: string, client: string }) => {
+    const { t } = useTranslation()
     const [isPlaying, setIsPlaying] = React.useState(false)
     const [isPaused, setIsPaused] = React.useState(false)
     const [progress, setProgress] = React.useState(0)
@@ -187,7 +189,7 @@ const VideoCard = ({ videoId, title, client }: { videoId: string, title: string,
             <div className="p-4 relative z-20 bg-black/40 backdrop-blur-md border-t border-[#FEFDFA]/5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <Youtube className="w-3.5 h-3.5 text-[#FEFDFA]/20" />
-                    <span className="text-[10px] font-bold text-[#FEFDFA]/20 uppercase tracking-widest">Cliente Zaeom</span>
+                    <span className="text-[10px] font-bold text-[#FEFDFA]/20 uppercase tracking-widest">{t('video_testimonials.card_footer')}</span>
                 </div>
                 <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map(s => <div key={s} className="w-1 h-1 rounded-full bg-[#39F265]/40" />)}
@@ -198,15 +200,16 @@ const VideoCard = ({ videoId, title, client }: { videoId: string, title: string,
 }
 
 export const VideoTestimonials = () => {
+    const { t } = useTranslation()
     const [currentIndex, setCurrentIndex] = React.useState(0)
     const containerRef = React.useRef<HTMLDivElement>(null)
 
     const videos = [
-        { id: "Nl-to1fs9Rs", client: "@heitorcastromqm", title: "'Zaeom, um grande aditivo à empresa.'" },
-        { id: "dWTbOo8G8B4", client: "@cassim", title: "'A Zaeom entrega resultados.'" },
-        { id: "bzDqFUGKuHE", client: "@falafrancescomjerome", title: "'Eles são muito bons no que eles fazem.'" },
-        { id: "__SZ19zMcDw", client: "@francianymadeira", title: "'Eu só tenho elogios para fazer.'" },
-        { id: "gEoYiTcJv_w", client: "@karinavieira.oficial", title: "'Cumpriram com tudo que a gente combinou.'" },
+        { id: "Nl-to1fs9Rs", client: "@heitorcastromqm", title: t('video_testimonials.testimonials.v1.title') },
+        { id: "dWTbOo8G8B4", client: "@cassim", title: t('video_testimonials.testimonials.v2.title') },
+        { id: "bzDqFUGKuHE", client: "@falafrancescomjerome", title: t('video_testimonials.testimonials.v3.title') },
+        { id: "__SZ19zMcDw", client: "@francianymadeira", title: t('video_testimonials.testimonials.v4.title') },
+        { id: "gEoYiTcJv_w", client: "@karinavieira.oficial", title: t('video_testimonials.testimonials.v5.title') },
     ]
 
     const [slidesToShow, setSlidesToShow] = React.useState(1)
@@ -247,13 +250,13 @@ export const VideoTestimonials = () => {
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-6">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#39F265]">Social Proof / Z-1</span>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#39F265]">{t('video_testimonials.badge')}</span>
                             </div>
                             <h2 className="text-4xl md:text-6xl font-bold text-[#FEFDFA] mb-4 tracking-tighter">
-                                A Prova na <span className="text-gradient">Prática</span>
+                                {t('video_testimonials.title_part1')} <span className="text-gradient">{t('video_testimonials.title_part2')}</span>
                             </h2>
                             <p className="text-[#FEFDFA]/40 text-lg max-w-xl font-medium leading-relaxed italic text-balance">
-                                Resultados reais contados por quem está à frente das empresas que mais crescem.
+                                {t('video_testimonials.subtitle')}
                             </p>
                         </motion.div>
                     </div>

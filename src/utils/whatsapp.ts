@@ -1,14 +1,18 @@
+import i18n from '@/i18n';
+
 export const WHATSAPP_NUMBER = "5548999085144"
 
-export const getWhatsappLink = (message: string) => {
+export const getWhatsappLink = (messageKey: string) => {
+    // Try to get the translated message, fallback to the key itself if not found
+    const message = i18n.t(`whatsapp.${messageKey.toLowerCase()}`, messageKey);
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
 export const WHATSAPP_MESSAGES = {
-    GENERAL: "Olá! Vim através do site e gostaria de saber mais sobre como a Zaeom pode otimizar minha operação.",
-    AGENT_IA: "Olá! Gostaria de saber mais sobre o Agente de IA para automação de tarefas massivas.",
-    AGENT_HUMAN: "Olá! Gostaria de falar com um especialista sobre o Agente Humano da Zaeom para demandas sensíveis.",
-    AGENT_HYBRID: "Olá! Tenho interesse no Agente Híbrido para equilibrar tecnologia e sensibilidade na minha operação.",
-    AGENT_CUSTOM: "Olá! Gostaria de uma solução sob medida (Agente Personalizado) para os fluxos únicos da minha empresa.",
-    PROTOCOL: "Olá! Gostaria de iniciar o protocolo Zaeom e devolver o ativo mais valioso à minha gestão: o tempo."
+    GENERAL: "GENERAL",
+    AGENT_IA: "AGENT_IA",
+    AGENT_HUMAN: "AGENT_HUMAN",
+    AGENT_HYBRID: "AGENT_HYBRID",
+    AGENT_CUSTOM: "AGENT_CUSTOM",
+    PROTOCOL: "PROTOCOL"
 }

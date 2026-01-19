@@ -1,39 +1,42 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Search, Settings, ShieldCheck, TrendingUp, Cpu } from "lucide-react"
-
-const steps = [
-    {
-        icon: Search,
-        id: "STEP_01",
-        title: "Mapeamos Dores",
-        label: "ANALYSIS",
-        description: "Analisamos seu fluxo atual e identificamos os gargalos operacionais que impedem seu crescimento."
-    },
-    {
-        icon: Settings,
-        id: "STEP_02",
-        title: "Configuração Express",
-        label: "DEPLOYMENT",
-        description: "Ativamos seu agente personalizado em tempo recorde. Velocidade russa em infraestrutura global."
-    },
-    {
-        icon: ShieldCheck,
-        id: "STEP_03",
-        title: "Definição de Limites",
-        label: "AUTHORIZATION",
-        description: "Você decide até onde a IA vai e onde o toque humano assume o controle total da negociação."
-    },
-    {
-        icon: TrendingUp,
-        id: "STEP_04",
-        title: "Otimização Contínua",
-        label: "SCALING",
-        description: "Monitoramento real-time e ajustes finos para garantir que cada lead seja convertido com precisão."
-    }
-]
+import { useTranslation } from "react-i18next"
 
 export const HowItWorks = () => {
+    const { t } = useTranslation()
+
+    const steps = [
+        {
+            icon: Search,
+            id: "STEP_01",
+            title: t('how_it_works.steps.s1.title'),
+            label: t('how_it_works.steps.s1.label'),
+            description: t('how_it_works.steps.s1.desc')
+        },
+        {
+            icon: Settings,
+            id: "STEP_02",
+            title: t('how_it_works.steps.s2.title'),
+            label: t('how_it_works.steps.s2.label'),
+            description: t('how_it_works.steps.s2.desc')
+        },
+        {
+            icon: ShieldCheck,
+            id: "STEP_03",
+            title: t('how_it_works.steps.s3.title'),
+            label: t('how_it_works.steps.s3.label'),
+            description: t('how_it_works.steps.s3.desc')
+        },
+        {
+            icon: TrendingUp,
+            id: "STEP_04",
+            title: t('how_it_works.steps.s4.title'),
+            label: t('how_it_works.steps.s4.label'),
+            description: t('how_it_works.steps.s4.desc')
+        }
+    ]
+
     return (
         <section className="py-24 md:py-40 px-6 relative overflow-hidden" id="explorar">
             {/* Background Tech Circle */}
@@ -44,11 +47,11 @@ export const HowItWorks = () => {
                 <div className="flex flex-col items-center text-center mb-16 md:mb-32">
                     <div className="glass-card px-4 py-1.5 rounded-lg border-[#39F265]/20 mb-8 flex items-center gap-3">
                         <Cpu className="w-4 h-4 text-[#39F265]" />
-                        <span className="text-[10px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.3em]">Protocolo de Implementação</span>
+                        <span className="text-[10px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.3em]">{t('how_it_works.badge')}</span>
                     </div>
                     <h2 className="heading-xl text-3xl sm:text-5xl md:text-8xl">
-                        Simples, Rápido e <br />
-                        <span className="text-gradient">Sem Burocracia</span>
+                        {t('how_it_works.title_part1')} <br />
+                        <span className="text-gradient">{t('how_it_works.title_part2')}</span>
                     </h2>
                 </div>
 

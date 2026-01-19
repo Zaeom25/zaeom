@@ -1,0 +1,264 @@
+{
+    "navbar": {
+        "solutions": "Soluciones",
+        "explore": "Explorar",
+        "results": "Resultados",
+        "insights": "Insights",
+        "cta": "Programar Ahora"
+    },
+    "hero": {
+        "subtitle_badge": "ZAEOM OPERATING SYSTEM",
+        "version": "V. 2026",
+        "title_part1": "Tu Empresa en",
+        "title_part2": "Piloto Automático",
+        "description": "No somos solo una herramienta, somos tu brazo operativo completo. Unimos la IA con la experiencia humana para que puedas ahorrar y enfocarte en el crecimiento.",
+        "cta": "AGENDAR DIAGNÓSTICO",
+        "support": "APOYO INSTITUCIONAL",
+        "features": {
+            "data_core": {
+                "badge": "Datos",
+                "title": "Núcleo de Datos",
+                "desc": "Centralización inteligente de toda la información operativa."
+            },
+            "priority_engine": {
+                "badge": "Prioridad",
+                "title": "Motor de Prioridad",
+                "desc": "Algoritmos que identifican y escalan lo que realmente genera beneficios."
+            },
+            "task_agent": {
+                "badge": "Agente",
+                "title": "Agentes de Tareas",
+                "desc": "IAs entrenadas para ejecutar tareas manuales sin error humano."
+            },
+            "network_flow": {
+                "badge": "Red",
+                "title": "Flujo de Red",
+                "desc": "Conexión fluida entre todos los departamentos de tu empresa."
+            },
+            "predictive": {
+                "badge": "Predictivo",
+                "title": "Análisis Predictivo",
+                "desc": "Anticipa tendencias y toma decisiones basadas en datos reales."
+            },
+            "infrastructure": {
+                "badge": "Infraestructura",
+                "title": "Infraestructura Segura",
+                "desc": "Capas de protección rusa para garantizar la soberanía de los datos."
+            }
+        },
+        "stats": {
+            "ia_interactions": "Interacciones Neurales",
+            "leads_generated": "Leads Cualificados",
+            "companies_scale": "Empresas en Escala"
+        }
+    },
+    "solutions": {
+        "badge": "Arquitectura de Soluciones",
+        "title_part1": "Protocolos de",
+        "title_part2": "Autonomía",
+        "description": "Arquitectura de autonomía y protocolos neurales diseñados para devolver el activo más valioso de tu gestión: el tiempo.",
+        "deploy": "ACTIVAR YA",
+        "agents": {
+            "ai": {
+                "label": "IA PURA",
+                "title": "Agentes Autónomos",
+                "description": "Sistemas neurales que trabajan 24/7. Responden, califican y venden sin intervención humana.",
+                "f1": "RESPUESTA EN 3S",
+                "f2": "MULTILINGÜE",
+                "f3": "ESCALA INFINITA"
+            },
+            "human": {
+                "label": "CEREBRO HUMANO",
+                "title": "Asistente Ejecutivo",
+                "description": "Profesionales de élite que se encargan de la agenda, correos y logística compleja de tu vida y empresa.",
+                "f1": "CULTURA CROSS",
+                "f2": "DISCRECIÓN TOTAL",
+                "f3": "DECISIONES REALES"
+            },
+            "hybrid": {
+                "label": "CYBERNETIC",
+                "title": "Flujo Híbrido",
+                "description": "La combinación perfecta: IA para velocidad y humanos para sensibilidad y negociaciones de alto valor.",
+                "f1": "ROI OPTIMIZADO",
+                "f2": "CONTROL TOTAL",
+                "f3": "HANDOFF FLUIDO"
+            },
+            "custom": {
+                "label": "PROYECTO Z",
+                "title": "Infra a Medida",
+                "description": "Desarrollamos el SOS (System) ideal para tu empresa. Personalización absoluta de procesos y herramientas.",
+                "f1": "API FIRST",
+                "f2": "WHITE LABEL",
+                "f3": "SEGURIDAD Z"
+            }
+        }
+    },
+    "about": {
+        "efficiency": "EFICIENCIA",
+        "efficiency_desc": "Optimización radical de flujos.",
+        "trust": "CONFIANZA",
+        "trust_desc": "Protocolos de seguridad rusa.",
+        "badge": "Inside Zaeom",
+        "title_part1": "No solo tratamos,",
+        "title_part2": "evolucionamos con",
+        "quote": "El tiempo es el único activo que no podemos recuperar. Mi enfoque es asegurar que nunca más lo pierdas en la operación.",
+        "p1": "Zaeom nació de una necesidad brutal de eficiencia. Entendemos que los empresarios modernos no pueden ser esclavos de procesos manuales lentos y defectuosos.",
+        "p2": "Implementamos una arquitectura de inteligencia que aprende de tu negocio, permitiendo una escala que antes era imposible sin triplicar los costos fijos.",
+        "mission_label": "NUESTRA MISIÓN",
+        "mission_text": "Liberar a los visionarios del",
+        "mission_highlight": "caos operativo",
+        "cta": "CONOCER EL PROTOCOLO"
+    },
+    "faq": {
+        "title": "Insights y Protocolos",
+        "subtitle": "Las respuestas que necesitas para entender la revolución de la autonomía.",
+        "questions": {
+            "q1": "¿Cómo se integra la IA de Zaeom con mi WhatsApp?",
+            "a1": "Utilizamos APIs oficiales e infraestructura propia para asegurar que tu IA responda en milisegundos, manteniendo la personalidad de tu marca y recopilando datos valiosos de cada interacción.",
+            "q2": "¿Cuál es la diferencia entre un asistente virtual y Zaeom?",
+            "a2": "Los asistentes ejecutan tareas. Zaeom implementa sistemas. Nuestro enfoque híbrido combina profesionales de élite con automatización avanzada, creando una infraestructura que escala por sí sola.",
+            "q3": "¿Están seguros mis datos y los de mis clientes?",
+            "a3": "La seguridad es nuestra base. Seguimos rigurosos protocolos de encriptación y soberanía de datos, inspirados en estándares globales de alta seguridad para asegurar que tu inteligencia de negocio permanezca privada.",
+            "q4": "¿En cuánto tiempo veré los primeros resultados?",
+            "a4": "La configuración inicial toma un promedio de 7 días. Sin embargo, el ahorro de tiempo es inmediato desde el primer día de activación de tu protocolo de autonomía."
+        }
+    },
+    "footer": {
+        "final_cta": {
+            "badge": "Sesión Final de Protocolo",
+            "title_part1": "¿Te sobra tiempo de verdad o tu dinero sigue estancado en lo",
+            "title_part2": "operativo?",
+            "description": "Deja las Finanzas, lo Comercial y el Marketing a quienes respiran eficiencia. Programa tu diagnóstico y descubre cuánto puedes ahorrar delegando en Zaeom.",
+            "button": "Optimizar mi Empresa"
+        },
+        "description": "Arquitectura de autonomía y protocolos neurales diseñados para devolver el activo más valioso de tu gestión: el tiempo.",
+        "company": "Empresa",
+        "about": "Sobre Nosotros",
+        "results": "Resultados",
+        "privacy": "Política de Privacidad",
+        "contact": "Contacto",
+        "rights": "TODOS OS DIREITOS RESERVADOS",
+        "made_with": "Hecho con",
+        "by": "por"
+    },
+    "diagnosis": {
+        "badge": "Diagnóstico de Eficiencia",
+        "title_part1": "¿Sientes que te estás",
+        "title_part2": "\"ahogando\"",
+        "title_part3": "en la operación?",
+        "description": "La mayoría de las empresas no mueren por falta de ventas, sino por un exceso de procesos manuales que generan parálisis.",
+        "fact_title": "La Verdad Inevitable:",
+        "fact_desc": "Puedes delegar prácticamente todo lo digital a nuestros motores neurales.",
+        "pain_points": {
+            "boring_work": {
+                "title": "Trabajo Aburrido",
+                "status": "CRÍTICO",
+                "desc": "Tareas repetitivas que absorben tu energía productiva todos los días."
+            },
+            "personal_life": {
+                "title": "Vida Personal de Lado",
+                "status": "ALTO RIESGO",
+                "desc": "Siempre conectado, nunca descansado. El negocio se convirtió en tu prisión."
+            },
+            "leads_cooling": {
+                "title": "Leads se Enfrían",
+                "status": "FUIDA",
+                "desc": "La demora en la respuesta hace que los clientes potenciales busquen a la competencia."
+            },
+            "decision_stress": {
+                "title": "Estrés Decisorio",
+                "status": "SOBRECARGA",
+                "desc": "Demasiadas microdecisiones que causan fatiga mental y parálisis."
+            }
+        }
+    },
+    "how_it_works": {
+        "badge": "Protocolo de Implementación",
+        "title_part1": "Simple, Rápido y",
+        "title_part2": "Sin Burocracia",
+        "steps": {
+            "s1": {
+                "label": "ANÁLISIS",
+                "title": "Mapeamos Dolores",
+                "desc": "Analizamos tu flujo actual e identificamos los cuellos de botella operativos que impiden tu crecimiento."
+            },
+            "s2": {
+                "label": "IMPLEMENTACIÓN",
+                "title": "Configuración Express",
+                "desc": "Activamos tu agente personalizado en tiempo récord. Velocidade russa em infraestrutura global."
+            },
+            "s3": {
+                "label": "AUTORIZACIÓN",
+                "title": "Definición de Límites",
+                "desc": "Tú decides hasta dónde llega la IA y dónde el toque humano asume el control total de la negociación."
+            },
+            "s4": {
+                "label": "ESCALA",
+                "title": "Optimización Continua",
+                "desc": "Monitoreo en tiempo real y ajustes precisos para asegurar que cada lead se convierta con exactitud."
+            }
+        }
+    },
+    "social_proof": {
+        "badge": "Testimonios en Texto",
+        "title": "Quién ya cambió el juego con",
+        "subtitle": "Protocolos de eficiencia validados por líderes que recuperaron su activo más valioso: el tiempo.",
+        "partner_badge": "Socio Zaeom"
+    },
+    "video_testimonials": {
+        "badge": "Social Proof / Z-1",
+        "title_part1": "La Prueba en la",
+        "title_part2": "Práctica",
+        "subtitle": "Resultados reales contados por quienes están en la primera línea de las empresas que más crecen.",
+        "card_footer": "Cliente Zaeom",
+        "testimonials": {
+            "v1": {
+                "title": "'Zaeom, un gran activo para la empresa.'"
+            },
+            "v2": {
+                "title": "'Zaeom entrega resultados.'"
+            },
+            "v3": {
+                "title": "'Son muy buenos en lo que hacen.'"
+            },
+            "v4": {
+                "title": "'Solo tengo elogios que dar.'"
+            },
+            "v5": {
+                "title": "'Cumplieron con todo lo acordado.'"
+            }
+        }
+    },
+    "privacy_modal": {
+        "title": "Política de Privacidad",
+        "sections": {
+            "data_protection": {
+                "title": "Protección de Datos",
+                "content": "En Zaeom, la privacidad y la seguridad de sus datos operativos son nuestra prioridad absoluta. Esta política detalla cómo manejamos la información recopilada a través de nuestro SOS (System)."
+            },
+            "collection": {
+                "title": "Recopilación de Información",
+                "content": "Recopilamos datos estrictamente necesarios para el funcionamiento de nuestros protocolos de IA, que incluyen:",
+                "items": [
+                    "Datos de contacto: nombre, correo electrónico y WhatsApp para citas.",
+                    "Metadados de uso: información técnica para la optimización del rendimiento del agente.",
+                    "Flujos operativos: datos proporcionados voluntariamente para el entrenamiento de modelos personalizados."
+                ]
+            },
+            "usage": {
+                "title": "Uso de Datos",
+                "content": "Sus datos se utilizan exclusivamente para:",
+                "items": [
+                    "Personalización de las respuestas del agente autónomo.",
+                    "Garantizar la seguridad de la infraestructura híbrida.",
+                    "Comunicaciones directas sobre el estado de su protocolo Z-01."
+                ]
+            },
+            "transparency": {
+                "title": "Transparencia Total",
+                "content": "No vendemos, compartimos ni alquilamos sus datos a terceros. El activo más valioso de su empresa es su inteligencia de negocio y lo protegemos como tal."
+            }
+        },
+        "footer": "Última actualización: Enero 2026 • Protocolo Zaeom"
+    }
+}

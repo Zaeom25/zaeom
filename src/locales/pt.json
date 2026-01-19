@@ -1,0 +1,264 @@
+{
+    "navbar": {
+        "solutions": "SOLUÇÕES",
+        "explore": "EXPLORE",
+        "results": "RESULTADOS",
+        "insights": "INSIGHTS",
+        "cta": "Agendar Diagnóstico"
+    },
+    "hero": {
+        "subtitle_badge": "ZAEOM OPERATING SYSTEM",
+        "version": "V. 2026",
+        "title_part1": "Sua Empresa no",
+        "title_part2": "Piloto Automático",
+        "description": "Não somos apenas uma ferramenta, somos o seu braço operacional completo. Unimos IA com expertise humana para você economizar e focar no crescimento.",
+        "cta": "Agendar Diagnóstico",
+        "support": "Apoio Institucional",
+        "features": {
+            "data_core": {
+                "badge": "Data Core",
+                "title": "Gestão de Informação Centralizada",
+                "desc": "Captura e organização automática de dados de clientes, fornecedores e parceiros. Sua base de conhecimento sempre atualizada."
+            },
+            "priority_engine": {
+                "badge": "Priority Engine",
+                "title": "Triagem Inteligente 24/7",
+                "desc": "Algoritmos que filtram o que é prioridade. Seja um lead quente, uma nota fiscal pendente ou um suporte urgente, nada passa despercebido."
+            },
+            "task_agent": {
+                "badge": "Task Agent",
+                "title": "Execução Autônoma",
+                "desc": "Nossa IA não apenas agenda reuniões, ela executa tarefas: envia boletos, confirma presenças e responde dúvidas rotineiras."
+            },
+            "network_flow": {
+                "badge": "Network Flow",
+                "title": "Otimização de Processos",
+                "desc": "Melhora contínua dos fluxos de trabalho. Identificamos gargalos operacionais e ajustamos a rota para máxima eficiência."
+            },
+            "predictive": {
+                "badge": "Predictive",
+                "title": "Previsibilidade de Resultados",
+                "desc": "Tenha clareza total. Relatórios que cruzam dados financeiros, comerciais e de produtividade para decisões baseadas em fatos."
+            },
+            "infrastructure": {
+                "badge": "Infrastructure",
+                "title": "Segurança e Escala",
+                "desc": "Infraestrutura robusta preparada para escalar sua empresa. Cresça 10x sem precisar contratar 10x mais funcionários."
+            }
+        },
+        "stats": {
+            "ia_interactions": "Interações IA",
+            "leads_generated": "Leads Gerados",
+            "companies_scale": "Empresas Escalam"
+        }
+    },
+    "solutions": {
+        "badge": "Infraestrutura de Agentes",
+        "title_part1": "Qual Agente Resolve",
+        "title_part2": "Seu Problema Hoje?",
+        "description": "Explore os motores neurais projetados para escalar sua operação comercial.",
+        "deploy": "Deploy Protocol",
+        "agents": {
+            "ai": {
+                "label": "AUTOMATED",
+                "title": "Agente de IA",
+                "description": "Execução massiva de tarefas repetitivas. Do suporte inicial à emissão de notas fiscais, o motor que nunca dorme.",
+                "f1": "RESPOSTA INSTANTÂNEA",
+                "f2": "ZERO ERRO HUMANO",
+                "f3": "ESCALA INFINITA"
+            },
+            "human": {
+                "label": "HUMAN EXPERTS",
+                "title": "Agente Humano",
+                "description": "Especialistas reais para demandas sensíveis. Negociação, gestão de crises e decisões estratégicas complexas.",
+                "f1": "EMPATIA TOTAL",
+                "f2": "GESTÃO ESTRATÉGICA",
+                "f3": "JULGAMENTO CRÍTICO"
+            },
+            "hybrid": {
+                "label": "BALANCE",
+                "title": "Agente Híbrido",
+                "description": "O melhor dos dois mundos. A IA processa o volume operacional e o Humano garante a qualidade da entrega final.",
+                "f1": "EFICIÊNCIA MÁXIMA",
+                "f2": "CUSTO OTIMIZADO",
+                "f3": "SUPERVISÃO DE QUALIDADE"
+            },
+            "custom": {
+                "label": "BESPOKE",
+                "title": "Agente Personalizado",
+                "description": "Arquitetura exclusiva desenhada sob medida para fluxos operacionais únicos ou integrações de sistemas legados.",
+                "f1": "WHITE LABEL",
+                "f2": "INTEGRAÇÃO FULL",
+                "f3": "SUPORTE VIP DEDICADO"
+            }
+        }
+    },
+    "about": {
+        "efficiency": "Eficiência",
+        "efficiency_desc": "Processos até 10x mais velozes que humanos.",
+        "trust": "Confiança",
+        "trust_desc": "Segurança de dados e curadoria especializada.",
+        "badge": "Propósito / DNA",
+        "title_part1": "A Visão por trás",
+        "title_part2": "da",
+        "quote": "A Zaeom nasceu de uma verdade inevitável: a maioria das empresas estagna por excesso de processos manuais que geram paralisia operacional.",
+        "p1": "Somos uma empresa de Inteligência Operacional Híbrida. Acreditamos que o empreendedor deve criar e liderar, não apenas processar tarefas repetitivas.",
+        "p2": "Unimos o melhor de dois mundos: a eficiência incansável da IA e a capacidade analítica e empática do ser humano para entregas de alta qualidade.",
+        "mission_label": "Nossa Missão",
+        "mission_text": "Devolver a você o ativo mais valioso do mundo:",
+        "mission_highlight": "o seu tempo.",
+        "cta": "Conhecer Protocolo"
+    },
+    "faq": {
+        "title": "Dúvidas Frequentes",
+        "subtitle": "Tudo o que você precisa saber antes de contratar seu primeiro agente.",
+        "questions": {
+            "q1": "Quais são as condições financeiras?",
+            "a1": "Trabalhamos com pacotes flexíveis dependendo do volume de atendimento. Temos desde modelos de taxa fixa até modelos baseados em performance/sucesso.",
+            "q2": "O que exatamente eu posso delegar?",
+            "a2": "Basicamente qualquer fluxo comercial ou de suporte digital: triagem de leads, agendamento de consultas, suporte técnico nível 1, fechamento de vendas diretas e muito mais.",
+            "q3": "Vocês atendem demandas personalizadas?",
+            "a3": "Sim! Nosso Agente Personalizado é focado justamente em negócios com fluxos atípicos que exigem integrações complexas com CRMs ou sistemas proprietários.",
+            "q4": "A IA realmente consegue ter empatia?",
+            "a4": "Nossa IA é treinada com modelos de linguagem avançados focados em tom de voz humano. Além disso, o Agente Híbrido garante que, em casos complexos, um humano assuma com todo o contexto."
+        }
+    },
+    "footer": {
+        "final_cta": {
+            "badge": "Sessão Final de Protocolo",
+            "title_part1": "Sobra tempo de verdade ou seu dinheiro continua parado no",
+            "title_part2": "funil?",
+            "description": "Deixe o operacional com quem entende e foque na estratégia que vai fazer seu negócio dobrar de tamanho este ano.",
+            "button": "QUERO COMEÇAR AGORA"
+        },
+        "description": "Arquitetura de autonomia e protocolos neurais projetados para devolver o ativo mais valioso da sua gestão: o tempo.",
+        "company": "Empresa",
+        "about": "Sobre Nós",
+        "results": "Resultados",
+        "privacy": "Política de Privacidade",
+        "contact": "Contato",
+        "rights": "TODOS OS DIREITOS RESERVADOS",
+        "made_with": "Feito com",
+        "by": "por"
+    },
+    "diagnosis": {
+        "badge": "Diagnóstico de Eficiência",
+        "title_part1": "Você sente que está",
+        "title_part2": "\"se afogando\"",
+        "title_part3": "no operacional?",
+        "description": "A maioria das empresas morre não por falta de vendas, mas por excesso de processos manuais que geram paralisia.",
+        "fact_title": "A Verdade Inevitável:",
+        "fact_desc": "Você pode delegar praticamente tudo do seu digital para nossos motores neurais.",
+        "pain_points": {
+            "boring_work": {
+                "title": "Trabalho Chato",
+                "status": "CRÍTICO",
+                "desc": "Tarefas repetitivas que sugam sua energia produtiva todos os dias."
+            },
+            "personal_life": {
+                "title": "Vida Pessoal de Lado",
+                "status": "ALTO RISCO",
+                "desc": "Sempre conectado, nunca descansado. O negócio virou sua prisão."
+            },
+            "leads_cooling": {
+                "title": "Leads Esfriam",
+                "status": "VAZAMENTO",
+                "desc": "Demora na resposta faz com que clientes em potencial busquem a concorrência."
+            },
+            "decision_stress": {
+                "title": "Estresse Decisório",
+                "status": "SOBRECARGA",
+                "desc": "Muitas micro-decisões que causam fadiga mental e paralisia."
+            }
+        }
+    },
+    "how_it_works": {
+        "badge": "Protocolo de Implementação",
+        "title_part1": "Simples, Rápido e",
+        "title_part2": "Sem Burocracia",
+        "steps": {
+            "s1": {
+                "label": "ANÁLISE",
+                "title": "Mapeamos Dores",
+                "desc": "Analisamos seu fluxo atual e identificamos os gargalos operacionais que impedem seu crescimento."
+            },
+            "s2": {
+                "label": "DEPLOYMENT",
+                "title": "Configuração Express",
+                "desc": "Ativamos seu agente personalizado em tempo recorde. Velocidade russa em infraestrutura global."
+            },
+            "s3": {
+                "label": "AUTHORIZATION",
+                "title": "Definição de Limites",
+                "desc": "Você decide até onde a IA vai e onde o toque humano assume o controle total da negociação."
+            },
+            "s4": {
+                "label": "SCALING",
+                "title": "Otimização Contínua",
+                "desc": "Monitoramento real-time e ajustes finos para garantir que cada lead seja convertido com precisão."
+            }
+        }
+    },
+    "social_proof": {
+        "badge": "TESTEMUNHOS EM TEXTO",
+        "title": "Quem já virou o jogo com a",
+        "subtitle": "Protocolos de eficiência validados por líderes que recuperaram seu ativo mais valioso: o tempo.",
+        "partner_badge": "Parceiro Zaeom"
+    },
+    "video_testimonials": {
+        "badge": "Social Proof / Z-1",
+        "title_part1": "A Prova na",
+        "title_part2": "Prática",
+        "subtitle": "Resultados reais contados por quem está à frente das empresas que mais crescem.",
+        "card_footer": "Cliente Zaeom",
+        "testimonials": {
+            "v1": {
+                "title": "'Zaeom, um grande aditivo à empresa.'"
+            },
+            "v2": {
+                "title": "'A Zaeom entrega resultados.'"
+            },
+            "v3": {
+                "title": "'Eles são muito bons no que eles fazem.'"
+            },
+            "v4": {
+                "title": "'Eu só tenho elogios para fazer.'"
+            },
+            "v5": {
+                "title": "'Cumpriram com tudo que a gente combinou.'"
+            }
+        }
+    },
+    "privacy_modal": {
+        "title": "Política de Privacidade",
+        "sections": {
+            "data_protection": {
+                "title": "Proteção de Dados",
+                "content": "Na Zaeom, a privacidade e a segurança dos seus dados operacionais são nossa prioridade absoluta. Esta política detalha como tratamos as informações coletadas através do nosso SOS (System)."
+            },
+            "collection": {
+                "title": "Coleta de Informações",
+                "content": "Coletamos dados estritamente necessários para o funcionamento dos nossos protocolos de IA, incluindo:",
+                "items": [
+                    "Dados de Contato: Nome, e-mail e WhatsApp para agendamentos.",
+                    "Metadados de Uso: Informações técnicas para otimização da performance do agente.",
+                    "Fluxos Operacionais: Dados fornecidos voluntariamente para o treinamento de modelos personalizados."
+                ]
+            },
+            "usage": {
+                "title": "Uso dos Dados",
+                "content": "Seus dados são utilizados exclusivamente para:",
+                "items": [
+                    "Personalização de respostas dos agentes autônomos.",
+                    "Garantia da segurança da infraestrutura híbrida.",
+                    "Comunicações diretas sobre o status do seu protocolo Z-01."
+                ]
+            },
+            "transparency": {
+                "title": "Transparência Total",
+                "content": "Não vendemos, compartilhamos ou alugamos seus dados para terceiros. O ativo mais valioso da sua empresa é a sua inteligência de negócio, e nós a protegemos como tal."
+            }
+        },
+        "footer": "Última atualização: Janeiro 2026 • Protocolo Zaeom"
+    }
+}

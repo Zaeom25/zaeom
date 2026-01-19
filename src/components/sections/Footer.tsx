@@ -6,8 +6,10 @@ import logoLumo from "@/assets/logo-lumo.svg"
 import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 import { CTAButton } from "@/components/ui/CTAButton"
 import { PrivacyModal } from "@/components/ui/PrivacyModal"
+import { useTranslation } from "react-i18next"
 
 export const FinalCTA = () => {
+    const { t } = useTranslation()
     return (
         <section className="py-20 sm:py-32 px-6 relative overflow-visible">
             {/* Background Aura */}
@@ -26,15 +28,15 @@ export const FinalCTA = () => {
                 <div className="relative z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-10">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                        <span className="text-[10px] font-black text-[#39F265] uppercase tracking-[0.2em]">Sessão Final de Protocolo</span>
+                        <span className="text-[10px] font-black text-[#39F265] uppercase tracking-[0.2em]">{t('footer.final_cta.badge')}</span>
                     </div>
 
                     <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEFDFA] mb-6 sm:mb-10 leading-[1.2] sm:leading-[1.05] tracking-tight text-balance max-w-4xl mx-auto">
-                        Sobra tempo de verdade ou seu dinheiro continua parado no <span className="text-gradient">operacional?</span>
+                        {t('footer.final_cta.title_part1')} <span className="text-gradient">{t('footer.final_cta.title_part2')}</span>
                     </h2>
 
                     <p className="text-[#FEFDFA]/40 text-base md:text-xl max-w-2xl mx-auto mb-12 sm:mb-16 leading-relaxed">
-                        Deixe o Financeiro, o Comercial e o Marketing com quem respira eficiência. Agende seu diagnóstico e descubra quanto você pode economizar delegando para a Zaeom.
+                        {t('footer.final_cta.description')}
                     </p>
 
                     <div className="flex justify-center">
@@ -43,7 +45,7 @@ export const FinalCTA = () => {
                             icon={Zap}
                             variant="footer"
                         >
-                            Otimizar Minha Empresa
+                            {t('footer.final_cta.button')}
                         </CTAButton>
                     </div>
                 </div>
@@ -56,6 +58,7 @@ export const FinalCTA = () => {
 }
 
 export const Footer = () => {
+    const { t } = useTranslation()
     const [isPrivacyOpen, setIsPrivacyOpen] = React.useState(false)
 
     const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -84,13 +87,13 @@ export const Footer = () => {
                     <div className="max-w-xs">
                         <img src={logoZaeom} alt="Zaeom Logo" className="h-10 w-auto mb-6" />
                         <p className="text-[#FEFDFA]/40 text-sm leading-relaxed">
-                            Arquitetura de autonomia e protocolos neurais projetados para devolver o ativo mais valioso da sua gestão: o tempo.
+                            {t('footer.description')}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16">
                         <div>
-                            <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">Empresa</h4>
+                            <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">{t('footer.company')}</h4>
                             <ul className="space-y-4 text-[#FEFDFA]/40 text-sm">
                                 <li>
                                     <a
@@ -98,7 +101,7 @@ export const Footer = () => {
                                         onClick={(e) => handleAnchorClick(e, "#sobre")}
                                         className="hover:text-[#39F265] transition-colors"
                                     >
-                                        Sobre Nós
+                                        {t('footer.about')}
                                     </a>
                                 </li>
                                 <li>
@@ -107,7 +110,7 @@ export const Footer = () => {
                                         onClick={(e) => handleAnchorClick(e, "#resultados")}
                                         className="hover:text-[#39F265] transition-colors"
                                     >
-                                        Resultados
+                                        {t('footer.results')}
                                     </a>
                                 </li>
                                 <li>
@@ -115,13 +118,13 @@ export const Footer = () => {
                                         onClick={() => setIsPrivacyOpen(true)}
                                         className="hover:text-[#39F265] transition-colors text-left"
                                     >
-                                        Política de Privacidade
+                                        {t('footer.privacy')}
                                     </button>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">Contato</h4>
+                            <h4 className="text-[#FEFDFA] font-bold mb-6 text-sm uppercase tracking-widest">{t('footer.contact')}</h4>
                             <ul className="space-y-4 text-[#FEFDFA]/40 text-sm">
                                 <li><a href="mailto:contato@zaeom.com" className="hover:text-[#39F265] transition-colors">contato@zaeom.com</a></li>
                                 <li><a href="tel:48999085144" className="hover:text-[#39F265] transition-colors">+55 (48) 99908-5144</a></li>
@@ -139,7 +142,7 @@ export const Footer = () => {
                                 <p>ZAEOM LTDA © 2026</p>
                             </div>
                             <p className="hidden md:block opacity-20">|</p>
-                            <p>TODOS OS DIREITOS RESERVADOS</p>
+                            <p>{t('footer.rights')}</p>
                             <p className="hidden md:block opacity-20">|</p>
                             <p>CNPJ: 00.000.000/0000-00</p>
                         </div>

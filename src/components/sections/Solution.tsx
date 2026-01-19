@@ -4,54 +4,58 @@ import { motion } from "framer-motion"
 import { Bot, User, Zap, Gem, ArrowUpRight, Layers } from "lucide-react"
 import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 
-const agents = [
-    {
-        icon: Bot,
-        id: "01",
-        label: "AUTOMATED",
-        title: "Agente de IA",
-        description: "Execução massiva de tarefas repetitivas. Do suporte inicial à emissão de notas fiscais, o motor que nunca dorme.",
-        features: ["RESPOSTA INSTANTÂNEA", "ESCALA INFINITA", "ZERO ERRO HUMANO"],
-        colSpan: "md:col-span-2",
-        bg: "bg-[#39F265]/5",
-        waMessage: WHATSAPP_MESSAGES.AGENT_IA
-    },
-    {
-        icon: User,
-        id: "02",
-        label: "HUMAN EXPERTS",
-        title: "Agente Humano",
-        description: "Especialistas reais para demandas sensíveis. Negociação, gestão de crises e decisões estratégicas complexas.",
-        features: ["EMPATIA TOTAL", "JULGAMENTO CRÍTICO", "GESTÃO ESTRATÉGICA"],
-        colSpan: "md:col-span-1",
-        bg: "bg-transparent",
-        waMessage: WHATSAPP_MESSAGES.AGENT_HUMAN
-    },
-    {
-        icon: Zap,
-        id: "03",
-        label: "BALANCE",
-        title: "Agente Híbrido",
-        description: "O melhor dos dois mundos. A IA processa o volume operacional e o Humano garante a qualidade da entrega final.",
-        features: ["EFICIÊNCIA MÁXIMA", "SUPERVISÃO DE QUALIDADE", "CUSTO OTIMIZADO"],
-        colSpan: "md:col-span-1",
-        bg: "bg-transparent",
-        waMessage: WHATSAPP_MESSAGES.AGENT_HYBRID
-    },
-    {
-        icon: Gem,
-        id: "04",
-        label: "BESPOKE",
-        title: "Agente Personalizado",
-        description: "Arquitetura exclusiva desenhada sob medida para fluxos operacionais únicos ou integrações de sistemas legados.",
-        features: ["WHITE LABEL", "SUPORTE VIP DEDICADO", "INTEGRAÇÃO FULL"],
-        colSpan: "md:col-span-2",
-        bg: "bg-[#39F265]/5",
-        waMessage: WHATSAPP_MESSAGES.AGENT_CUSTOM
-    }
-]
+import { useTranslation } from "react-i18next"
 
 export const Solution = () => {
+    const { t } = useTranslation()
+
+    const agents = [
+        {
+            icon: Bot,
+            id: "01",
+            label: t('solutions.agents.ai.label'),
+            title: t('solutions.agents.ai.title'),
+            description: t('solutions.agents.ai.description'),
+            features: [t('solutions.agents.ai.f1'), t('solutions.agents.ai.f2'), t('solutions.agents.ai.f3')],
+            colSpan: "md:col-span-2",
+            bg: "bg-[#39F265]/5",
+            waMessage: WHATSAPP_MESSAGES.AGENT_IA
+        },
+        {
+            icon: User,
+            id: "02",
+            label: t('solutions.agents.human.label'),
+            title: t('solutions.agents.human.title'),
+            description: t('solutions.agents.human.description'),
+            features: [t('solutions.agents.human.f1'), t('solutions.agents.human.f2'), t('solutions.agents.human.f3')],
+            colSpan: "md:col-span-1",
+            bg: "bg-transparent",
+            waMessage: WHATSAPP_MESSAGES.AGENT_HUMAN
+        },
+        {
+            icon: Zap,
+            id: "03",
+            label: t('solutions.agents.hybrid.label'),
+            title: t('solutions.agents.hybrid.title'),
+            description: t('solutions.agents.hybrid.description'),
+            features: [t('solutions.agents.hybrid.f1'), t('solutions.agents.hybrid.f2'), t('solutions.agents.hybrid.f3')],
+            colSpan: "md:col-span-1",
+            bg: "bg-transparent",
+            waMessage: WHATSAPP_MESSAGES.AGENT_HYBRID
+        },
+        {
+            icon: Gem,
+            id: "04",
+            label: t('solutions.agents.custom.label'),
+            title: t('solutions.agents.custom.title'),
+            description: t('solutions.agents.custom.description'),
+            features: [t('solutions.agents.custom.f1'), t('solutions.agents.custom.f2'), t('solutions.agents.custom.f3')],
+            colSpan: "md:col-span-2",
+            bg: "bg-[#39F265]/5",
+            waMessage: WHATSAPP_MESSAGES.AGENT_CUSTOM
+        }
+    ]
+
     return (
         <section className="py-12 md:py-40 px-6 relative" id="solucoes">
             <div className="max-w-7xl mx-auto">
@@ -67,7 +71,7 @@ export const Solution = () => {
                             <div className="w-8 h-8 rounded-lg bg-[#39F265]/10 flex items-center justify-center">
                                 <Layers className="w-5 h-5 text-[#39F265]" />
                             </div>
-                            <span className="text-[11px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.4em]">Infraestrutura de Agentes</span>
+                            <span className="text-[11px] font-black text-[#FEFDFA]/40 uppercase tracking-[0.4em]">{t('solutions.badge')}</span>
                         </motion.div>
                         <h2 className="heading-xl text-3xl sm:text-5xl md:text-7xl lg:text-8xl flex flex-col items-start">
                             <motion.span
@@ -77,7 +81,7 @@ export const Solution = () => {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                                 className="text-[#FEFDFA]"
                             >
-                                Qual Agente Resolve
+                                {t('solutions.title_part1')}
                             </motion.span>
                             <motion.span
                                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
@@ -86,7 +90,7 @@ export const Solution = () => {
                                 transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                                 className="text-gradient"
                             >
-                                Seu Problema Hoje?
+                                {t('solutions.title_part2')}
                             </motion.span>
                         </h2>
                     </div>
@@ -97,7 +101,7 @@ export const Solution = () => {
                         transition={{ duration: 0.8, delay: 0.6 }}
                         className="text-[#FEFDFA]/40 text-sm font-medium uppercase tracking-[0.2em] max-w-[320px] leading-relaxed border-l border-[#39F265]/20 pl-6 mb-2 text-left"
                     >
-                        Explore os motores neurais projetados para escalar sua operação comercial.
+                        {t('solutions.description')}
                     </motion.p>
                 </div>
 
@@ -146,7 +150,7 @@ export const Solution = () => {
 
                                     <div className="pt-6 flex items-center justify-between group/btn">
                                         <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#39F265] opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-x-4 group-hover:translate-x-0">
-                                            Deploy Protocol
+                                            {t('solutions.deploy')}
                                         </span>
                                         <div className="w-12 h-12 rounded-full border border-[#FEFDFA]/10 flex items-center justify-center group-hover:border-[#39F265] group-hover:bg-[#39F265] transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(57,242,101,0.5)]">
                                             <ArrowUpRight className="w-5 h-5 text-[#FEFDFA] group-hover:text-[#111111] transition-colors" />

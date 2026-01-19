@@ -3,8 +3,10 @@ import { motion } from "framer-motion"
 import { Target, ArrowRight, Zap, ShieldCheck } from "lucide-react"
 import soniaImg from "@/assets/Sonia Ribeiro - 01.webp"
 import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
+import { useTranslation } from "react-i18next"
 
 export const About = () => {
+    const { t } = useTranslation()
     return (
         <section
             id="sobre"
@@ -52,15 +54,15 @@ export const About = () => {
                                     <div className="w-8 h-8 rounded-lg bg-[#39F265]/10 flex items-center justify-center mb-3">
                                         <Zap className="w-4 h-4 text-[#39F265]" />
                                     </div>
-                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.2em] block mb-1">Eficiência</span>
-                                    <p className="text-xs font-bold text-[#FEFDFA]/60 leading-tight">Processos até 10x mais velozes que humanos.</p>
+                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.2em] block mb-1">{t('about.efficiency')}</span>
+                                    <p className="text-xs font-bold text-[#FEFDFA]/60 leading-tight">{t('about.efficiency_desc')}</p>
                                 </div>
                                 <div className="p-5 rounded-[2rem] bg-[#FEFDFA]/[0.02] border border-[#FEFDFA]/5 group hover:border-[#39F265]/30 transition-colors">
                                     <div className="w-8 h-8 rounded-lg bg-[#39F265]/10 flex items-center justify-center mb-3">
                                         <ShieldCheck className="w-4 h-4 text-[#39F265]" />
                                     </div>
-                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.2em] block mb-1">Confiança</span>
-                                    <p className="text-xs font-bold text-[#FEFDFA]/60 leading-tight">Segurança de dados e curadoria especializada.</p>
+                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.2em] block mb-1">{t('about.trust')}</span>
+                                    <p className="text-xs font-bold text-[#FEFDFA]/60 leading-tight">{t('about.trust_desc')}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -77,29 +79,29 @@ export const About = () => {
                             {/* Section Label */}
                             <div className="flex items-center gap-3 mb-10">
                                 <span className="h-px w-8 bg-[#39F265]/30" />
-                                <span className="text-[11px] font-black text-[#39F265] uppercase tracking-[0.4em]">Propósito / DNA</span>
+                                <span className="text-[11px] font-black text-[#39F265] uppercase tracking-[0.4em]">{t('about.badge')}</span>
                             </div>
 
                             <h2 className="text-5xl md:text-7xl font-bold text-[#FEFDFA] mb-12 tracking-tighter leading-[0.9]">
-                                A Visão por trás <br />da <span className="text-gradient">Zaeom</span>
+                                {t('about.title_part1')} <br />{t('about.title_part2')} <span className="text-gradient">Zaeom</span>
                             </h2>
 
                             <div className="space-y-12">
                                 {/* The Problem/Insight (Quote Style but Clean) */}
                                 <p className="text-2xl md:text-3xl font-medium text-[#FEFDFA] leading-tight tracking-tight border-l-2 border-[#39F265] pl-8">
-                                    "A Zaeom nasceu de uma verdade inevitável: a maioria das empresas estagna por excesso de processos manuais que geram paralisia operacional."
+                                    "{t('about.quote')}"
                                 </p>
 
                                 {/* The Solution (Body Text) */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#FEFDFA]/50 text-base leading-relaxed">
                                     <div className="space-y-4">
                                         <p>
-                                            Somos uma empresa de <span className="text-[#FEFDFA]">Inteligência Operacional Híbrida</span>. Acreditamos que o empreendedor deve criar e liderar, não apenas processar tarefas repetitivas.
+                                            {t('about.p1')}
                                         </p>
                                     </div>
                                     <div className="space-y-4">
                                         <p>
-                                            Unimos o melhor de dois mundos: a eficiência incansável da <span className="text-[#39F265]">IA</span> e a capacidade analítica e empática do ser humano para entregas de alta qualidade.
+                                            {t('about.p2')}
                                         </p>
                                     </div>
                                 </div>
@@ -114,12 +116,12 @@ export const About = () => {
                                     <div className="absolute top-0 right-0 p-6 opacity-10">
                                         <Target className="w-12 h-12 text-[#39F265]" />
                                     </div>
-                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.3em] block mb-4">Nossa Missão</span>
+                                    <span className="text-[9px] font-black text-[#39F265] uppercase tracking-[0.3em] block mb-4">{t('about.mission_label')}</span>
                                     <p className="text-xl md:text-2xl font-bold text-[#FEFDFA] italic leading-snug">
-                                        Devolver a você o ativo mais valioso do mundo: <br /> <span className="text-[#39F265]">o seu tempo</span>.
+                                        {t('about.mission_text')} <br /> <span className="text-[#39F265]">{t('about.mission_highlight')}</span>.
                                     </p>
                                     <div className="mt-8 flex items-center gap-2 group-hover:gap-4 transition-all duration-500">
-                                        <span className="text-[11px] font-black text-[#FEFDFA] uppercase tracking-[0.2em]">Conhecer Protocolo</span>
+                                        <span className="text-[11px] font-black text-[#FEFDFA] uppercase tracking-[0.2em]">{t('about.cta')}</span>
                                         <ArrowRight className="w-4 h-4 text-[#39F265]" />
                                     </div>
                                 </a>

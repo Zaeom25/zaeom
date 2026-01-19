@@ -1,0 +1,264 @@
+{
+    "navbar": {
+        "solutions": "Lösungen",
+        "explore": "Erkunden",
+        "results": "Ergebnisse",
+        "insights": "Insights",
+        "cta": "Jetzt Termine"
+    },
+    "hero": {
+        "subtitle_badge": "ZAEOM OPERATING SYSTEM",
+        "version": "V. 2026",
+        "title_part1": "Ihr Unternehmen auf",
+        "title_part2": "Autopilot",
+        "description": "Wir sind nicht nur ein Tool, wir sind Ihr kompletter operativer Arm. Wir vereinen KI mit menschlicher Expertise, damit Sie sparen und sich auf das Wachstum konzentrieren können.",
+        "cta": "DIAGNOSE VEREINBAREN",
+        "support": "INSTITUTIONELLE UNTERSTÜTZUNG",
+        "features": {
+            "data_core": {
+                "badge": "Daten",
+                "title": "Datenkern",
+                "desc": "Intelligente Zentralisierung aller operativen Informationen."
+            },
+            "priority_engine": {
+                "badge": "Priorität",
+                "title": "Prioritäts-Engine",
+                "desc": "Algorithmen, die identifizieren und skalieren, was wirklich Gewinn bringt."
+            },
+            "task_agent": {
+                "badge": "Agent",
+                "title": "Aufgaben-Agenten",
+                "desc": "KIs, die darauf trainiert sind, manuelle Aufgaben ohne menschliche Fehler auszuführen."
+            },
+            "network_flow": {
+                "badge": "Netzwerk",
+                "title": "Netzwerk-Fluss",
+                "desc": "Flüssige Verbindung zwischen allen Abteilungen Ihres Unternehmens."
+            },
+            "predictive": {
+                "badge": "Prädiktiv",
+                "title": "Prädiktive Analytik",
+                "desc": "Trends antizipieren und Entscheidungen auf Basis realer Daten treffen."
+            },
+            "infrastructure": {
+                "badge": "Infrastruktur",
+                "title": "Sichere Infrastruktur",
+                "desc": "Russische Schutzschichten zur Gewährleistung der Datensouveränität."
+            }
+        },
+        "stats": {
+            "ia_interactions": "Neurale Interaktionen",
+            "leads_generated": "Qualifizierte Leads",
+            "companies_scale": "Unternehmen in Skalierung"
+        }
+    },
+    "solutions": {
+        "badge": "Lösungsarchitektur",
+        "title_part1": "Protokolle der",
+        "title_part2": "Autonomie",
+        "description": "Autonomiearchitektur and neurale Protokolle, die darauf ausgelegt sind, das wertvollste Gut Ihres Managements zurückzugeben: Zeit.",
+        "deploy": "JETZT AKTIVIEREN",
+        "agents": {
+            "ai": {
+                "label": "REINE KI",
+                "title": "Autonome Agenten",
+                "description": "Neurale Systeme, die rund um die Uhr arbeiten. Sie antworten, qualifizieren und verkaufen ohne menschliches Eingreifen.",
+                "f1": "ANTWORT IN 3S",
+                "f2": "MEHRSPRACHIG",
+                "f3": "UNENDLICHE SKALIERUNG"
+            },
+            "human": {
+                "label": "MENSCHLICHES GEHIRN",
+                "title": "Executive Assistant",
+                "description": "Elite-Profis, die sich um Termine, E-Mails und komplexe Logistik Ihres Lebens und Unternehmens kümmern.",
+                "f1": "CROSS-KULTUR",
+                "f2": "VOLLE DISKRETION",
+                "f3": "ECHTE ENTSCHEIDUNGEN"
+            },
+            "hybrid": {
+                "label": "KYBERNETISCH",
+                "title": "Hybrider Fluss",
+                "description": "Die perfekte Verbindung: KI für Geschwindigkeit und Menschen für Feingefühl und High-Ticket-Verhandlungen.",
+                "f1": "OPTIMIERTER ROI",
+                "f2": "VOLLE KONTROLLE",
+                "f3": "FLUIDER HANDOFF"
+            },
+            "custom": {
+                "label": "PROJEKT Z",
+                "title": "Maßgeschneiderte Infrastruktur",
+                "description": "Wir entwickeln das ideale SOS (System) für Ihr Unternehmen. Absolute Personalisierung von Prozessen und Tools.",
+                "f1": "API FIRST",
+                "f2": "WHITE LABEL",
+                "f3": "Z-SICHERHEIT"
+            }
+        }
+    },
+    "about": {
+        "efficiency": "EFFIZIENZ",
+        "efficiency_desc": "Radikale Optimierung von Abläufen.",
+        "trust": "VERTRAUEN",
+        "trust_desc": "Russische Sicherheitsprotokolle.",
+        "badge": "Inside Zaeom",
+        "title_part1": "Nicht nur behandeln,",
+        "title_part2": "sondern entwickeln mit",
+        "quote": "Zeit ist das einzige Gut, das wir nicht zurückgewinnen können. Mein Fokus liegt darauf, sicherzustellen, dass Sie sie nie wieder im Operativen verlieren.",
+        "p1": "Zaeom entstand aus einem brutalen Bedürfnis nach Effizienz. Wir verstehen, dass moderne Unternehmer keine Sklaven langsamer und fehlerhafter manueller Prozesse sein können.",
+        "p2": "Wir implementieren eine Intelligenzarchitektur, die von Ihrem Unternehmen lernt und eine Skalierung ermöglicht, die zuvor ohne eine Verdreifachung der Fixkosten unmöglich war.",
+        "mission_label": "UNSERE MISSION",
+        "mission_text": "Visionäre befreien vom",
+        "mission_highlight": "operativen Chaos",
+        "cta": "PROTOKOLL KENNENLERNEN"
+    },
+    "faq": {
+        "title": "Insights & Protokolle",
+        "subtitle": "Die Antworten, die Sie brauchen, um die Autonomie-Revolution zu verstehen.",
+        "questions": {
+            "q1": "Wie integriert sich die KI von Zaeom in mein WhatsApp?",
+            "a1": "Wir nutzen offizielle APIs und proprietäre Infrastruktur, um sicherzustellen, dass Ihre KI in Millisekunden antwortet, dabei Ihre Markenpersönlichkeit bewahrt und wertvolle Daten bei jeder Interaktion sammelt.",
+            "q2": "Was ist der Unterschied zwischen einem virtuellen Assistenten und Zaeom?",
+            "a2": "Assistenten führen Aufgaben aus. Zaeom implementiert Systeme. Unser hybrider Ansatz kombiniert Elite-Profis mit fortschrittlicher Automatisierung und schafft so eine Infrastruktur, die von selbst skaliert.",
+            "q3": "Sind meine Daten und die meiner Kunden sicher?",
+            "a3": "Sicherheit ist unser Fundament. Wir folgen strengen Verschlüsselungs- und Datensouveränitätsprotokollen, inspiriert von globalen Hochsicherheitsstandards, um sicherzustellen, dass Ihre Business Intelligence privat bleibt.",
+            "q4": "Wie schnell sehe ich die ersten Ergebnisse?",
+            "a4": "Die Ersteinrichtung dauert im Durchschnitt 7 Tage. Die Zeitersparnis tritt jedoch ab dem ersten Tag der Aktivierung Ihres Autonomie-Protokolls unmittelbar ein."
+        }
+    },
+    "footer": {
+        "final_cta": {
+            "badge": "Abschließende Protokollsitzung",
+            "title_part1": "Bleibt wirklich Zeit übrig oder steckt Ihr Geld immer noch im",
+            "title_part2": "Operativen fest?",
+            "description": "Überlassen Sie Finanzen, Vertrieb und Marketing denjenigen, die Effizienz atmen. Vereinbaren Sie Ihre Diagnose und finden Sie heraus, wie viel Sie sparen können, wenn Sie an Zaeom delegieren.",
+            "button": "Mein Unternehmen optimieren"
+        },
+        "description": "Autonomiearchitektur und neurale Protokolle, die darauf ausgelegt sind, das wertvollste Gut Ihres Managements zurückzugeben: Zeit.",
+        "company": "Unternehmen",
+        "about": "Über uns",
+        "results": "Ergebnisse",
+        "privacy": "Datenschutzrichtlinie",
+        "contact": "Kontakt",
+        "rights": "ALLE RECHTE VORBEHALTEN",
+        "made_with": "Hergestellt mit",
+        "by": "von"
+    },
+    "diagnosis": {
+        "badge": "Effizienz-Diagnose",
+        "title_part1": "Haben Sie das Gefühl,",
+        "title_part2": "\"unterzugehen\"",
+        "title_part3": "im Operativen?",
+        "description": "Die meisten Unternehmen sterben nicht an mangelnden Verkäufen, sondern an einem Übermaß an manuellen Prozessen, die eine Lähmung verursachen.",
+        "fact_title": "Die unvermeidliche Wahrheit:",
+        "fact_desc": "Sie können praktisch alles Digitale an unsere neuralen Engines delegieren.",
+        "pain_points": {
+            "boring_work": {
+                "title": "Langweilige Arbeit",
+                "status": "KRITISCH",
+                "desc": "Wiederkehrende Aufgaben, die jeden Tag Ihre produktive Energie rauben."
+            },
+            "personal_life": {
+                "title": "Privatleben beiseite",
+                "status": "HOHES RISIKO",
+                "desc": "Immer vernetzt, nie ausgeruht. Das Geschäft ist zu Ihrem Gefängnis geworden."
+            },
+            "leads_cooling": {
+                "title": "Leads kühlen ab",
+                "status": "LECKS",
+                "desc": "Verzögerungen bei der Antwort führen dazu, dass potenzielle Kunden zur Konkurrenz abwandern."
+            },
+            "decision_stress": {
+                "title": "Entscheidungsstress",
+                "status": "ÜBERLASTUNG",
+                "desc": "Zu viele Mikro-Entscheidungen, die geistige Erschöpfung und Lähmung verursachen."
+            }
+        }
+    },
+    "how_it_works": {
+        "badge": "Implementierungsprotokoll",
+        "title_part1": "Einfach, schnell und",
+        "title_part2": "ohne Bürokratie",
+        "steps": {
+            "s1": {
+                "label": "ANALYSE",
+                "title": "Schmerzpunkte aufspüren",
+                "desc": "Wir analysieren Ihren aktuellen Fluss und identifizieren die operativen Engpässe, die Ihr Wachstum verhindern."
+            },
+            "s2": {
+                "label": "IMPLEMENTIERUNG",
+                "title": "Express-Konfiguration",
+                "desc": "Wir aktivieren Ihren persönlichen Agenten in Rekordzeit. Russische Geschwindigkeit auf globaler Infrastruktur."
+            },
+            "s3": {
+                "label": "AUTORISIERUNG",
+                "title": "Grenzen setzen",
+                "desc": "Sie entscheiden, wie weit die KI geht und wo der menschliche Touch die volle Kontrolle über die Verhandlung übernimmt."
+            },
+            "s4": {
+                "label": "SKALIERUNG",
+                "title": "Kontinuierliche Optimierung",
+                "desc": "Echtzeit-Überwachung und Feinabstimmung, um sicherzustellen, dass jeder Lead mit höchster Präzision konvertiert wird."
+            }
+        }
+    },
+    "social_proof": {
+        "badge": "Schriftliche Referenzen",
+        "title": "Wer das Spiel bereits verändert hat mit",
+        "subtitle": "Effizienzprotokolle, validiert von Führungskräften, die ihr wertvollstes Gut zurückgewonnen haben: Zeit.",
+        "partner_badge": "Zaeom-Partner"
+    },
+    "video_testimonials": {
+        "badge": "Social Proof / Z-1",
+        "title_part1": "Der Beweis in der",
+        "title_part2": "Praxis",
+        "subtitle": "Echte Ergebnisse, erzählt von denjenigen, die an vorderster Front der am schnellsten wachsenden Unternehmen stehen.",
+        "card_footer": "Zaeom-Kunde",
+        "testimonials": {
+            "v1": {
+                "title": "'Zaeom, eine großartige Ergänzung für das Unternehmen.'"
+            },
+            "v2": {
+                "title": "'Zaeom liefert Ergebnisse.'"
+            },
+            "v3": {
+                "title": "'Sie sind sehr gut in dem, was sie tun.'"
+            },
+            "v4": {
+                "title": "'Ich kann sie nur loben.'"
+            },
+            "v5": {
+                "title": "'Sie haben alles eingehalten, was wir vereinbart haben.'"
+            }
+        }
+    },
+    "privacy_modal": {
+        "title": "Datenschutzrichtlinie",
+        "sections": {
+            "data_protection": {
+                "title": "Datenschutz",
+                "content": "Bei Zaeom haben der Schutz und die Sicherheit Ihrer operativen Daten oberste Priorität. Diese Richtlinie beschreibt, wie wir mit den über unser SOS (System) erfassten Informationen umgehen."
+            },
+            "collection": {
+                "title": "Datenerhebung",
+                "content": "Wir erheben Daten, die für den Betrieb unserer KI-Protokolle unbedingt erforderlich sind, darunter:",
+                "items": [
+                    "Kontaktdaten: Name, E-Mail und WhatsApp für Termine.",
+                    "Nutzungsmetadaten: Technische Informationen zur Optimierung der Agentenleistung.",
+                    "Operative Abläufe: Freiwillig bereitgestellte Daten für das Training kundenspezifischer Modelle."
+                ]
+            },
+            "usage": {
+                "title": "Datennutzung",
+                "content": "Ihre Daten werden ausschließlich verwendet für:",
+                "items": [
+                    "Personalisierung autonomer Agentenantworten.",
+                    "Gewährleistung der Sicherheit der hybriden Infrastruktur.",
+                    "Direkte Kommunikation über den Status Ihres Z-01-Protokolls."
+                ]
+            },
+            "transparency": {
+                "title": "Volle Transparenz",
+                "content": "Wir verkaufen, teilen oder vermieten Ihre Daten nicht an Dritte. Das wertvollste Gut Ihres Unternehmens ist seine Business Intelligence, und wir schützen sie als solches."
+            }
+        },
+        "footer": "Letzte Aktualisierung: Januar 2026 • Zaeom-Protokoll"
+    }
+}

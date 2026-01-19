@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue, useInView }
 import { MousePointer2, Database, Filter, Shield, Activity, BarChart3, Zap } from "lucide-react"
 import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 import { CTAButton } from "@/components/ui/CTAButton"
+import { useTranslation } from "react-i18next"
 
 const NumberTicker = ({ value, suffix = "", decimals = 0, delay = 0 }: { value: number, suffix?: string, decimals?: number, delay?: number }) => {
     const ref = React.useRef<HTMLSpanElement>(null)
@@ -71,6 +72,7 @@ const NeuralFeature = ({ icon: Icon, title, description, badge }: { icon: any, t
 }
 
 export const Hero = () => {
+    const { t } = useTranslation()
     const { scrollY } = useScroll()
     const y1 = useTransform(scrollY, [0, 500], [0, 200])
     const containerRef = React.useRef<HTMLDivElement>(null)
@@ -111,14 +113,14 @@ export const Hero = () => {
                     <div className="inline-flex items-center gap-1.5 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-full border border-[#39F265]/20 bg-[#39F265]/5 mb-6 md:mb-12 overflow-hidden group">
                         <div className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#39F265] animate-pulse" />
-                            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#39F265] whitespace-nowrap">ZAEOM OPERATING SYSTEM</span>
+                            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#39F265] whitespace-nowrap">{t('hero.subtitle_badge')}</span>
                         </div>
                         <div className="w-px h-3 bg-[#39F265]/20" />
-                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">V. 2026</span>
+                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#FEFDFA]/40 whitespace-nowrap">{t('hero.version')}</span>
                     </div>
 
                     <h1 className="text-[2.2rem] xs:text-[2.6rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-bold md:font-black mb-6 md:mb-10 max-w-6xl mx-auto px-2 sm:px-4 text-balance leading-[1.1] md:leading-[0.9] tracking-[-0.05em] md:tracking-[-0.04em] text-[#FEFDFA]">
-                        {"Sua Empresa no".split(" ").map((word, i) => (
+                        {t('hero.title_part1').split(" ").map((word, i) => (
                             <motion.span
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
@@ -135,7 +137,7 @@ export const Hero = () => {
                             transition={{ duration: 1.2, delay: 0.5 }}
                             className="text-gradient block mt-1"
                         >
-                            Piloto Automático
+                            {t('hero.title_part2')}
                         </motion.span>
                     </h1>
 
@@ -146,7 +148,7 @@ export const Hero = () => {
                         className="max-w-3xl mx-auto mb-10 md:mb-16 px-6"
                     >
                         <p className="text-sm md:text-xl lg:text-2xl text-[#FEFDFA]/50 md:text-[#FEFDFA]/60 leading-[1.6] md:leading-[1.6] font-medium tracking-tight">
-                            Não somos apenas uma ferramenta, somos o seu braço operacional completo. Unimos IA com expertise humana para você economizar e focar no crescimento.
+                            {t('hero.description')}
                         </p>
                     </motion.div>
 
@@ -156,13 +158,13 @@ export const Hero = () => {
                                 href={getWhatsappLink(WHATSAPP_MESSAGES.GENERAL)}
                                 icon={MousePointer2}
                             >
-                                Agendar Diagnóstico
+                                {t('hero.cta')}
                             </CTAButton>
                         </div>
 
                         <div className="flex items-center gap-6 md:gap-8 md:pl-10 md:border-l border-[#FEFDFA]/10">
                             <div className="text-center md:text-left">
-                                <p className="text-[9px] md:text-[10px] font-black text-[#FEFDFA]/30 uppercase tracking-[0.3em] mb-2 md:mb-3">Apoio Institucional</p>
+                                <p className="text-[9px] md:text-[10px] font-black text-[#FEFDFA]/30 uppercase tracking-[0.3em] mb-2 md:mb-3">{t('hero.support')}</p>
                                 <div className="flex gap-4 md:gap-6 items-center justify-center md:justify-start opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
                                     <span className="text-[10px] md:text-xs font-black text-[#FEFDFA] tracking-tighter uppercase">ABSTARTUPS</span>
                                     <span className="text-[10px] md:text-xs font-black text-[#FEFDFA] tracking-tighter uppercase">SEBRAE</span>
@@ -193,12 +195,12 @@ export const Hero = () => {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16 relative py-12"
                     >
                         {[
-                            { icon: Database, badge: "Data Core", title: "Gestão de Informação Centralizada", desc: "Captura e organização automática de dados de clientes, fornecedores e parceiros. Sua base de conhecimento sempre atualizada." },
-                            { icon: Filter, badge: "Priority Engine", title: "Triagem Inteligente 24/7", desc: "Algoritmos que filtram o que é prioridade. Seja um lead quente, uma nota fiscal pendente ou um suporte urgente, nada passa despercebido." },
-                            { icon: Zap, badge: "Task Agent", title: "Execução Autônoma", desc: "Nossa IA não apenas agenda reuniões, ela executa tarefas: envia boletos, confirma presenças e responde dúvidas rotineiras." },
-                            { icon: Activity, badge: "Network Flow", title: "Otimização de Processos", desc: "Melhora contínua dos fluxos de trabalho. Identificamos gargalos operacionais e ajustamos a rota para máxima eficiência." },
-                            { icon: BarChart3, badge: "Predictive", title: "Previsibilidade de Resultados", desc: "Tenha clareza total. Relatórios que cruzam dados financeiros, comerciais e de produtividade para decisões baseadas em fatos." },
-                            { icon: Shield, badge: "Infrastructure", title: "Segurança e Escala", desc: "Infraestrutura robusta preparada para escalar sua empresa. Cresça 10x sem precisar contratar 10x mais funcionários." }
+                            { icon: Database, badge: t('hero.features.data_core.badge'), title: t('hero.features.data_core.title'), desc: t('hero.features.data_core.desc') },
+                            { icon: Filter, badge: t('hero.features.priority_engine.badge'), title: t('hero.features.priority_engine.title'), desc: t('hero.features.priority_engine.desc') },
+                            { icon: Zap, badge: t('hero.features.task_agent.badge'), title: t('hero.features.task_agent.title'), desc: t('hero.features.task_agent.desc') },
+                            { icon: Activity, badge: t('hero.features.network_flow.badge'), title: t('hero.features.network_flow.title'), desc: t('hero.features.network_flow.desc') },
+                            { icon: BarChart3, badge: t('hero.features.predictive.badge'), title: t('hero.features.predictive.title'), desc: t('hero.features.predictive.desc') },
+                            { icon: Shield, badge: t('hero.features.infrastructure.badge'), title: t('hero.features.infrastructure.title'), desc: t('hero.features.infrastructure.desc') }
                         ].map((feature, i) => (
                             <motion.div
                                 key={i}
@@ -232,7 +234,7 @@ export const Hero = () => {
                         </div>
                         <div className="text-[10px] uppercase tracking-[0.4em] font-black text-[#39F265]/50 flex items-center gap-2">
                             <div className="w-1 h-1 rounded-full bg-[#39F265] animate-pulse" />
-                            Interações IA
+                            {t('hero.stats.ia_interactions')}
                         </div>
                         <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-16 w-px bg-gradient-to-b from-transparent via-[#FEFDFA]/10 to-transparent" />
                     </div>
@@ -241,7 +243,7 @@ export const Hero = () => {
                         <div className="text-5xl md:text-6xl lg:text-7xl font-black text-[#FEFDFA] mb-4 tracking-tighter">
                             <NumberTicker value={30} suffix="k+" decimals={0} delay={0.4} />
                         </div>
-                        <div className="text-[10px] uppercase tracking-[0.4em] font-black text-[#FEFDFA]/30">Leads Gerados</div>
+                        <div className="text-[10px] uppercase tracking-[0.4em] font-black text-[#FEFDFA]/30">{t('hero.stats.leads_generated')}</div>
                         <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-16 w-px bg-gradient-to-b from-transparent via-[#FEFDFA]/10 to-transparent" />
                     </div>
 
@@ -249,7 +251,7 @@ export const Hero = () => {
                         <div className="text-5xl md:text-6xl lg:text-7xl font-black text-[#FEFDFA] mb-4 tracking-tighter">
                             <NumberTicker value={150} suffix="+" decimals={0} delay={0.6} />
                         </div>
-                        <div className="text-[10px] uppercase tracking-[0.4em] font-black text-[#FEFDFA]/30">Empresas Escalam</div>
+                        <div className="text-[10px] uppercase tracking-[0.4em] font-black text-[#FEFDFA]/30">{t('hero.stats.companies_scale')}</div>
                     </div>
 
                     <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FEFDFA]/5 to-transparent" />

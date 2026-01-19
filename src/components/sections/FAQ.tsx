@@ -1,4 +1,3 @@
-import React from "react"
 import {
     Accordion,
     AccordionContent,
@@ -6,36 +5,39 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { motion } from "framer-motion"
-
-const faqs = [
-    {
-        question: "Quais são as condições financeiras?",
-        answer: "Trabalhamos com pacotes flexíveis dependendo do volume de atendimento. Temos desde modelos de taxa fixa até modelos baseados em performance/sucesso."
-    },
-    {
-        question: "O que exatamente eu posso delegar?",
-        answer: "Basicamente qualquer fluxo comercial ou de suporte digital: triagem de leads, agendamento de consultas, suporte técnico nível 1, fechamento de vendas diretas e muito mais."
-    },
-    {
-        question: "Vocês atendem demandas personalizadas?",
-        answer: "Sim! Nosso Agente Personalizado é focado justamente em negócios com fluxos atípicos que exigem integrações complexas com CRMs ou sistemas proprietários."
-    },
-    {
-        question: "A IA realmente consegue ter empatia?",
-        answer: "Nossa IA é treinada com modelos de linguagem avançados focados em tom de voz humano. Além disso, o Agente Híbrido garante que, em casos complexos, um humano assuma com todo o contexto."
-    }
-]
+import { useTranslation } from "react-i18next"
 
 export const FAQ = () => {
+    const { t } = useTranslation()
+
+    const faqs = [
+        {
+            question: t('faq.questions.q1'),
+            answer: t('faq.questions.a1')
+        },
+        {
+            question: t('faq.questions.q2'),
+            answer: t('faq.questions.a2')
+        },
+        {
+            question: t('faq.questions.q3'),
+            answer: t('faq.questions.a3')
+        },
+        {
+            question: t('faq.questions.q4'),
+            answer: t('faq.questions.a4')
+        }
+    ]
+
     return (
         <section className="py-16 md:py-32 px-6 relative" id="insights">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-[#FEFDFA] mb-6">
-                        Dúvidas Frequentes
+                        {t('faq.title')}
                     </h2>
                     <p className="text-[#FEFDFA]/60 text-lg">
-                        Tudo o que você precisa saber antes de contratar seu primeiro agente.
+                        {t('faq.subtitle')}
                     </p>
                 </div>
 

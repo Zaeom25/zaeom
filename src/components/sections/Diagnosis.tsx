@@ -1,39 +1,42 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { FileWarning, UserX, ThermometerSnowflake, BrainCircuit, AlertCircle } from "lucide-react"
-
-const painPoints = [
-    {
-        icon: FileWarning,
-        title: "Trabalho Chato",
-        status: "CRITICAL",
-        description: "Tarefas repetitivas que sugam sua energia produtiva todos os dias.",
-        value: 85
-    },
-    {
-        icon: UserX,
-        title: "Vida Pessoal de Lado",
-        status: "HIGH RISK",
-        description: "Sempre conectado, nunca descansado. O negócio virou sua prisão.",
-        value: 92
-    },
-    {
-        icon: ThermometerSnowflake,
-        title: "Leads Esfriam",
-        status: "LEAKAGE",
-        description: "Demora na resposta faz com que clientes em potencial busquem a concorrência.",
-        value: 74
-    },
-    {
-        icon: BrainCircuit,
-        title: "Estresse Decisório",
-        status: "OVERLOAD",
-        description: "Muitas micro-decisões que causam fadiga mental e paralisia.",
-        value: 81
-    }
-]
+import { useTranslation } from "react-i18next"
 
 export const Diagnosis = () => {
+    const { t } = useTranslation()
+
+    const painPoints = [
+        {
+            icon: FileWarning,
+            title: t('diagnosis.pain_points.boring_work.title'),
+            status: t('diagnosis.pain_points.boring_work.status'),
+            description: t('diagnosis.pain_points.boring_work.desc'),
+            value: 85
+        },
+        {
+            icon: UserX,
+            title: t('diagnosis.pain_points.personal_life.title'),
+            status: t('diagnosis.pain_points.personal_life.status'),
+            description: t('diagnosis.pain_points.personal_life.desc'),
+            value: 92
+        },
+        {
+            icon: ThermometerSnowflake,
+            title: t('diagnosis.pain_points.leads_cooling.title'),
+            status: t('diagnosis.pain_points.leads_cooling.status'),
+            description: t('diagnosis.pain_points.leads_cooling.desc'),
+            value: 74
+        },
+        {
+            icon: BrainCircuit,
+            title: t('diagnosis.pain_points.decision_stress.title'),
+            status: t('diagnosis.pain_points.decision_stress.status'),
+            description: t('diagnosis.pain_points.decision_stress.desc'),
+            value: 81
+        }
+    ]
+
     return (
         <section className="py-32 px-6 relative" id="diagnostico">
             {/* Top transition glow */}
@@ -52,11 +55,11 @@ export const Diagnosis = () => {
                         >
                             <div className="flex items-center gap-3 mb-8">
                                 <div className="w-12 h-[1px] bg-[#39F265]" />
-                                <span className="text-[11px] font-black text-[#39F265] uppercase tracking-[0.4em]">Diagnóstico de Eficiência</span>
+                                <span className="text-[11px] font-black text-[#39F265] uppercase tracking-[0.4em]">{t('diagnosis.badge')}</span>
                             </div>
 
                             <h2 className="heading-xl text-5xl md:text-6xl lg:text-7xl mb-12 text-left text-balance leading-[1.05] tracking-tight">
-                                {"Você sente que está".split(" ").map((word, i) => (
+                                {t('diagnosis.title_part1').split(" ").map((word, i) => (
                                     <motion.span
                                         key={i}
                                         initial={{ opacity: 0, y: 15 }}
@@ -75,7 +78,7 @@ export const Diagnosis = () => {
                                     transition={{ duration: 1, delay: 0.4 }}
                                     className="text-gradient block"
                                 >
-                                    "se afogando"
+                                    {t('diagnosis.title_part2')}
                                 </motion.span>
                                 <motion.span
                                     initial={{ opacity: 0 }}
@@ -84,7 +87,7 @@ export const Diagnosis = () => {
                                     transition={{ duration: 0.8, delay: 0.6 }}
                                     className="text-[#FEFDFA]"
                                 >
-                                    no operacional?
+                                    {t('diagnosis.title_part3')}
                                 </motion.span>
                             </h2>
 
@@ -95,7 +98,7 @@ export const Diagnosis = () => {
                                 transition={{ duration: 0.8, delay: 0.8 }}
                                 className="text-[#FEFDFA]/50 text-xl leading-relaxed mb-12 max-w-md"
                             >
-                                A maioria das empresas morre não por falta de vendas, mas por excesso de processos manuais que geram paralisia.
+                                {t('diagnosis.description')}
                             </motion.p>
 
                             <motion.div
@@ -108,8 +111,8 @@ export const Diagnosis = () => {
                                 <div className="flex items-start gap-4">
                                     <AlertCircle className="w-6 h-6 text-[#39F265] shrink-0" />
                                     <div>
-                                        <p className="text-xl font-bold text-[#FEFDFA] leading-tight mb-2">A Verdade Inevitável:</p>
-                                        <p className="text-[#FEFDFA]/60 text-base">Você pode delegar praticamente tudo do seu digital para nossos motores neurais.</p>
+                                        <p className="text-xl font-bold text-[#FEFDFA] leading-tight mb-2">{t('diagnosis.fact_title')}</p>
+                                        <p className="text-[#FEFDFA]/60 text-base">{t('diagnosis.fact_desc')}</p>
                                     </div>
                                 </div>
                             </motion.div>
