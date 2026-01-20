@@ -2,7 +2,6 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Zap, MousePointer2 } from "lucide-react"
 import logoZaeom from "@/assets/logo-zaeom.svg"
-import logoLumo from "@/assets/logo-lumo.svg"
 import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 import { CTAButton } from "@/components/ui/CTAButton"
 import { PrivacyModal } from "@/components/ui/PrivacyModal"
@@ -135,44 +134,16 @@ export const Footer = () => {
 
                 <div className="pt-12 border-t border-[#FEFDFA]/5 relative">
                     <div className="flex flex-col lg:flex-row justify-between items-center gap-10 text-[#FEFDFA]/25 text-[9px] font-bold uppercase tracking-[0.3em]">
-                        {/* Legal Info */}
-                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 whitespace-nowrap">
-                            <div className="flex items-center gap-3">
-                                <div className="w-1 h-1 rounded-full bg-[#39F265]" />
-                                <p>ZAEOM LTDA © 2026</p>
-                            </div>
-                            <p className="hidden md:block opacity-20">|</p>
-                            <p>{t('footer.rights')}</p>
-                            <p className="hidden md:block opacity-20">|</p>
-                            <p>CNPJ: 00.000.000/0000-00</p>
+                        {/* Legal Info Left */}
+                        <div className="flex items-center gap-3 whitespace-nowrap">
+                            <div className="w-1 h-1 rounded-full bg-[#39F265]" />
+                            <p>ZAEOM LTDA © 2026</p>
                         </div>
 
-                        {/* Credits */}
-                        <div className="flex items-center gap-6 whitespace-nowrap">
-                            <a
-                                href="https://lumostudio.com.br"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 group/lumo transition-all duration-300"
-                            >
-                                <span className="opacity-50 group-hover:opacity-80 transition-opacity">Feito com</span>
-                                <motion.svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    className="w-3.5 h-3.5 text-[#39F265] drop-shadow-[0_0_8px_rgba(57,242,101,0.4)]"
-                                    animate={{ scale: [1, 1.25, 1] }}
-                                    transition={{
-                                        duration: 2,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                >
-                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                </motion.svg>
-                                <span className="opacity-50 group-hover:opacity-80 transition-opacity">por</span>
-                                <img src={logoLumo} alt="Lumo Studio" className="h-3 object-contain opacity-40 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0" />
-                            </a>
+                        <div className="flex items-center gap-4 md:gap-8 whitespace-nowrap">
+                            <p>{t('footer.rights')}</p>
+                            <span className="hidden md:block opacity-20">|</span>
+                            <p>CNPJ: 64.118.969/0001-44</p>
                             <div className="w-1 h-1 rounded-full bg-[#39F265]/40" />
                         </div>
                     </div>
