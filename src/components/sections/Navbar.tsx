@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronRight } from "lucide-react"
 import logoZaeom from "@/assets/logo-zaeom.svg"
 
-import { getWhatsappLink, WHATSAPP_MESSAGES } from "@/utils/whatsapp"
 import { CTAButton } from "@/components/ui/CTAButton"
 import { LanguageSelector } from "@/components/ui/LanguageSelector"
 import { useTranslation } from "react-i18next"
@@ -87,10 +86,10 @@ export const Navbar = () => {
                         <div className="w-px h-6 bg-white/10 mx-4" />
 
                         <CTAButton
-                            href={getWhatsappLink(WHATSAPP_MESSAGES.PROTOCOL)}
+                            href="https://market.zaeom.com/"
                             variant="nav"
                         >
-                            {t('navbar.cta')}
+                            Zaeom Market
                         </CTAButton>
                     </div>
                 </motion.nav>
@@ -159,11 +158,11 @@ export const Navbar = () => {
 
                         <div className="mt-12 space-y-8 relative z-10">
                             <CTAButton
-                                href={getWhatsappLink(WHATSAPP_MESSAGES.PROTOCOL)}
+                                href="https://market.zaeom.com/"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="w-full h-16 text-lg"
                             >
-                                {t('navbar.cta')}
+                                Zaeom Market
                             </CTAButton>
 
                             <div className="flex flex-col items-center gap-4">
